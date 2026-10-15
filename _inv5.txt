@@ -1,0 +1,59 @@
+=== CLIENT DIRS (depth 2) ===
+\assets
+\css
+\js
+\assets\avatar
+\assets\idle-ui
+\assets\maps
+\assets\sound
+\assets\ui
+\assets\idle-ui\doll
+\assets\idle-ui\fonts
+\assets\idle-ui\fx
+\assets\idle-ui\img
+\assets\idle-ui\ui
+\assets\sound\skill
+\assets\ui\toolbar
+\assets\ui\world
+\js\engine
+\js\game
+\js\ui
+
+=== CLIENT FILES (root) ===
+index.html | 12KB
+index.html.bak | 12KB
+index.html.before-idle | 11KB
+index.html.pre-layout.bak | 11KB
+
+=== SERVER DIRS ===
+\.tsupgrader
+\data
+\dist
+\node_modules
+\src
+\tests
+\.tsupgrader\runtime-validation
+\node_modules\.bin
+\node_modules\@esbuild
+\node_modules\@types
+\node_modules\@typescript
+\node_modules\esbuild
+\node_modules\iconv-lite
+\node_modules\safer-buffer
+\node_modules\tsx
+\node_modules\typescript
+\node_modules\undici-types
+\node_modules\ws
+
+=== SERVER FILES (root) ===
+.gitignore | 0KB
+package-lock.json | 30KB
+package.json | 0KB
+server.err.log | 0KB
+server.out.log | 0KB
+test-e2e.mjs | 7KB
+tsconfig.json | 0KB
+
+=== ASSETS DIRS ===
+
+=== PUBLIC DIRS ===

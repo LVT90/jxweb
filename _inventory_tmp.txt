@@ -1,0 +1,42 @@
+=== TOP LEVEL DIRS ===
+.github
+assets
+client
+docs
+jx-idle-main
+public
+server
+web_port
+
+=== JX-IDLE-MAIN ROOT FILES ===
+.assetsignore | 304B | 07/10/2026 9:23:17 AM
+.gitignore | 69B | 07/10/2026 9:23:17 AM
+data.js | 3514368B | 07/10/2026 9:23:17 AM
+fx.js | 28191B | 07/10/2026 9:23:17 AM
+index.html | 9823B | 07/10/2026 9:23:17 AM
+jmo.js | 73479B | 07/10/2026 9:23:17 AM
+manifest.json | 248B | 07/10/2026 9:23:17 AM
+package-lock.json | 49392B | 07/10/2026 9:23:17 AM
+package.json | 279B | 07/10/2026 9:23:17 AM
+rdata.js | 12195B | 07/10/2026 9:23:17 AM
+README.md | 25807B | 07/10/2026 9:23:17 AM
+ref.js | 1991510B | 07/10/2026 9:23:17 AM
+server.ps1 | 2254B | 07/10/2026 9:23:17 AM
+sound.js | 16738B | 07/10/2026 9:23:17 AM
+start_game.bat | 135B | 07/10/2026 9:23:17 AM
+style.css | 28562B | 07/10/2026 9:23:17 AM
+sw.js | 1514B | 07/10/2026 9:23:17 AM
+world.js | 75923B | 07/10/2026 9:23:17 AM
+wrangler.jsonc | 1367B | 07/10/2026 9:23:17 AM
+
+=== JX-IDLE-MAIN DIRS ===
+doll
+fonts
+fx
+img
+js
+migrations
+music
+snd
+ui
+worker

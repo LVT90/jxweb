@@ -1,0 +1,30 @@
+
+=== doll ===
+  [TOTAL: 11171 files]
+
+=== fonts ===
+  [TOTAL: 7 files]
+
+=== fx ===
+  [TOTAL: 202 files]
+
+=== img ===
+  [TOTAL: 1638 files]
+
+=== js ===
+  [TOTAL: 40 files]
+
+=== migrations ===
+  [TOTAL: 1 files]
+
+=== music ===
+  [TOTAL: 12 files]
+
+=== snd ===
+  [TOTAL: 232 files]
+
+=== ui ===
+  [TOTAL: 115 files]
+
+=== worker ===
+  [TOTAL: 11 files]

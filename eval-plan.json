@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-10-09T19:31:36+07:00",
+  "generatedOnPlatform": "win32",
+  "projectType": "server",
+  "devServer": {
+    "command": "npm",
+    "args": [
+      "run",
+      "start"
+    ],
+    "cwd": ".",
+    "env": {
+      "HOST": "127.0.0.1",
+      "PORT": "2568"
+    },
+    "url": "http://127.0.0.1:2568/api/health",
+    "readyTimeoutSeconds": 60
+  },
+  "setup": [
+    {
+      "command": "npm",
+      "args": [
+        "ci",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "cwd": ".",
+      "timeoutSeconds": 600
+    }
+  ],
+  "assertions": [
+    {
+      "name": "server-builds",
+      "kind": "process",
+      "command": "npm",
+      "args": [
+        "run",
+        "build"
+      ],
+      "cwd": ".",
+      "verificationMethod": "exit-code",
+      "expected": "0",
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "tests-pass",
+      "kind": "process",
+      "command": "npm",
+      "args": [
+        "test"
+      ],
+      "cwd": ".",
+      "env": {
+        "BASE_URL": "http://127.0.0.1:2568"
+      },
+      "verificationMethod": "test-results",
+      "expected": "0",
+      "timeoutSeconds": 300
+    }
+  ]
+}

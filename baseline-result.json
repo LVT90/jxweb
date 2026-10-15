@@ -1,0 +1,103 @@
+{
+  "planHash": "39c2a0ce8cb3018939760ae919c9108058b0589545fb99bef484181dc933b1fd",
+  "phase": "baseline",
+  "recordedAtUtc": "2026-10-09T12:32:39.3204015Z",
+  "retryCount": 0,
+  "resetBaseline": true,
+  "complete": true,
+  "result": {
+    "setupSucceeded": true,
+    "setupDurationMs": 2080,
+    "setupFailureOutput": null,
+    "assertions": [
+      {
+        "name": "server-builds",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E jxweb-server@0.2.0 build\r\n\u003E tsc --project tsconfig.json\r\n\r\n",
+        "durationMs": 2256
+      },
+      {
+        "name": "tests-pass",
+        "kind": "process",
+        "verificationMethod": "test-results",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E jxweb-server@0.2.0 test\r\n\u003E node --test --test-reporter=tap tests/runtime-validation.test.mjs\r\n\r\nTAP version 13\r\n# Subtest: encodes and decodes the GBK map-name characters\r\nok 1 - encodes and decodes the GBK map-name characters\r\n  ---\r\n  duration_ms: 267.7977\r\n  type: \u0027test\u0027\r\n  ...\r\n# Subtest: serves the health endpoint\r\nok 2 - serves the health endpoint\r\n  ---\r\n  duration_ms: 41.6492\r\n  type: \u0027test\u0027\r\n  ...\r\n# Subtest: serves the factions catalog\r\nok 3 - serves the factions catalog\r\n  ---\r\n  duration_ms: 3.5144\r\n  type: \u0027test\u0027\r\n  ...\r\n1..3\r\n# tests 3\r\n# suites 0\r\n# pass 3\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 434.4113\r\n",
+        "durationMs": 958,
+        "testResults": {
+          "testFramework": "unknown",
+          "runnerDetectedFrom": "none",
+          "testsTotal": 0,
+          "testsPassed": 0,
+          "testsFailed": 0,
+          "testsSkipped": 0,
+          "parseFailed": true
+        }
+      }
+    ],
+    "executions": [
+      {
+        "source": "setup[0]",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "ci",
+          "--no-audit",
+          "--no-fund"
+        ],
+        "cwd": "d:\\jx-web m\u1EDBi\\server",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "devServer",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "run",
+          "start"
+        ],
+        "cwd": "d:\\jx-web m\u1EDBi\\server",
+        "env": {
+          "HOST": "127.0.0.1",
+          "PORT": "2568"
+        },
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "server-builds",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "run",
+          "build"
+        ],
+        "cwd": "d:\\jx-web m\u1EDBi\\server",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "tests-pass",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "test"
+        ],
+        "cwd": "d:\\jx-web m\u1EDBi\\server",
+        "env": {
+          "BASE_URL": "http://127.0.0.1:2568"
+        },
+        "prependPath": [],
+        "platform": "win32"
+      }
+    ]
+  }
+}
