@@ -1,0 +1,20 @@
+/* VLI V12 skill window: show effective learned+gear levels consistently. */
+body.v9-jx .v9-skill-tile.v12-has-bonus .v9-tile-lv{
+  color:#ffe188!important;background:#182015e8!important;
+  font:bold 11px/12px Tahoma,Arial,sans-serif!important;
+  min-width:18px;padding:0 1px;text-shadow:0 1px 2px #000;
+}
+body.v9-jx .v9-skill-tile .v12-tile-bonus{
+  position:absolute;right:0;top:0;z-index:3;pointer-events:none;
+  color:#9cff87;background:#073015e8;
+  font:bold 9px/12px Tahoma,Arial,sans-serif!important;
+  padding:0 1px;max-width:70%;text-align:right;
+  border-left:1px solid #40764d;border-bottom:1px solid #40764d;
+  text-shadow:0 1px 1px #000;
+}
+body.v9-jx .v9-skill-card .v12-card-bonus{
+  color:#a7f59e!important;font-weight:700;white-space:nowrap;
+  text-shadow:0 1px 1px #08170d;
+}
+/* The red add-points button from V11 retains the highest hit target. */
+body.v9-jx .v9-skill-tile .v9-tile-plus{z-index:5}

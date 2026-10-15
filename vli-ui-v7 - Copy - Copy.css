@@ -1,0 +1,82 @@
+/* VLI V7: presentation-only skin. Existing combat, auto, storage and events untouched. */
+:root{--v7-edge:#8e8462;--v7-bright:#e6c77a;--v7-panel:#171b17;--v7-deep:#080b09}
+body.u20 #hud{background:linear-gradient(180deg,#5c5034 0%,#25251d 35%,#11150f 100%)!important;border-color:var(--v7-edge)!important;box-shadow:0 2px 8px #000d,inset 0 1px #b9ad7b77!important}
+body.u20 #hud .bar{border:1px solid #b5ab80!important;box-shadow:inset 0 0 0 1px #070907,0 1px 3px #000!important}
+body.u20 #pad{filter:drop-shadow(0 3px 8px #000c)}
+body.u20 #pad .pbtn{transition:filter .13s,border-color .13s;outline:1px solid #090b08;outline-offset:1px}
+body.u20 #pad .pbtn:hover{filter:brightness(1.24)}
+body.u20 #pad .pbtn.cur,body.u20 #pad .pbtn.mn{outline:1px solid #d5b66c;box-shadow:0 0 0 1px #15130d,0 0 10px #e7bb4c77!important}
+body.u20 #pad .pbtn:focus-visible,.u2buy:focus-visible,.u2cat button:focus-visible{outline:2px solid #f0d478!important;outline-offset:2px}
+body.u20 #panel,body.u20 #modal .mbox{background:linear-gradient(160deg,#303329 0%,#1a211b 25%,#111713 100%)!important;border:2px solid var(--v7-edge)!important;box-shadow:inset 0 0 0 1px #34382b,0 0 0 2px #080907,0 9px 26px #000e!important}
+body.u20 #panel{max-height:calc(100dvh - 112px)!important;scrollbar-color:#786d4a #10130f}
+body.u20 #panel .tab{color:#e7dec0}
+#u20wh{background:linear-gradient(#686549,#35382c 45%,#1c241c)!important;border-bottom:1px solid #b6a16b!important;color:#ffe3a5!important;text-shadow:0 1px #000,0 0 9px #ab853666!important}
+body.u20 #modal #mBody>h3:first-child{background:linear-gradient(#686549,#34392c 55%,#1b201b)!important;border-bottom:1px solid #b6a16b!important;color:#ffe3a5!important}
+.u2h,.u2nm{color:#f4d892!important;border-color:#b59b61!important}
+.u2doll{border:2px ridge #7f775c!important;background:radial-gradient(ellipse,#404535 0%,#1a241d 65%,#090e0b 100%)!important}
+.u2s{border:1px solid #8a7852!important;background:radial-gradient(#262b21,#090b08)!important}
+.u2s:hover{border-color:#e8c676!important;filter:brightness(1.15)}
+.u2a{border-bottom:1px solid #72674744;padding:4px 0}
+.u2bag .invgrid{border:2px ridge #847553!important;background:#332f24!important;box-shadow:0 0 0 1px #080a07,0 2px 8px #0009!important}
+.u2bag .it{background:radial-gradient(#242a21,#080b09)!important;box-shadow:inset 0 1px 5px #000d!important;transition:filter .12s,border-color .12s}
+.u2bag .it:hover{filter:brightness(1.25);border-color:#e6c77a!important}
+.u2bag .it.r1{border-color:#6aa8ff!important}.u2bag .it.r2{border-color:#f0c963!important}.u2bag .it.r3{border-color:#c58af0!important}
+.u2k{background:radial-gradient(#273029,#0a0d0a)!important;border:1px solid #787157!important;box-shadow:inset 0 0 7px #000b,0 1px 2px #000!important}
+.u2k:hover{border-color:#dfbd6d!important}.u2k.main{border:2px solid #f3d074!important;box-shadow:0 0 9px #dbaa5070,inset 0 0 7px #000!important}
+.u2kh{background:linear-gradient(#475744,#202d26)!important;border-color:#958359!important;color:#ffe8af!important}
+.u2shop{gap:10px}.u2cat{background:linear-gradient(#1c251e,#0b0f0b)!important;border:1px solid #84795b!important}
+.u2cat button{border:1px solid transparent!important;text-align:left}.u2cat button:hover{background:#495541!important;border-color:#756d53!important}.u2cat button.on{background:linear-gradient(#665c36,#3d3925)!important;color:#ffe3a4!important;border-color:#b19b60!important}
+.u2cards{gap:9px}.u2card{background:linear-gradient(#333b30,#131a16)!important;border:1px solid #867b59!important;box-shadow:inset 0 0 0 1px #12160f,0 2px 4px #0008!important}.u2card:hover{border-color:#d3bb80!important}
+.u2ct{background:linear-gradient(#545941,#292f24)!important;color:#f2dfb1!important}.u2buy{background:linear-gradient(#88744b,#493c27)!important;border-color:#d7ba73!important}.u2buy:hover:not(:disabled){filter:brightness(1.2)}
+#u20menu{border-color:#b5a16d!important;background:linear-gradient(#54543f,#1a2119)!important;box-shadow:inset 0 1px #d3bc7855,0 3px 9px #000c!important}
+#u20side .u20sq{border-color:#9d8c60;background:linear-gradient(#40544b,#141e17)}
+@media(max-width:900px){body.u20 #panel{max-width:95vw!important}body.u20 #modal .mbox{max-width:96vw!important}body.u20 .u2shop{grid-template-columns:100px minmax(0,1fr)}body.u20 .u2cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){body.u20 .u2shop{grid-template-columns:1fr}body.u20 .u2cat{flex-direction:row;flex-wrap:wrap}body.u20 .u2cards{grid-template-columns:repeat(2,minmax(0,1fr))}.u2char{grid-template-columns:1fr!important}}
+@media(prefers-reduced-motion:reduce){body.u20 #pad .pbtn,.u2bag .it{transition:none!important}}
+
+/* VLI V7.2: desktop classic layout; keep the game, right panel and bottom navigation visible. */
+body.vli-v7-classic #u20wh { display:none!important; }
+body.vli-v7-classic #top {
+  background:linear-gradient(180deg,#353c32 0%,#171b15 48%,#0b100d 100%)!important;
+  border-bottom:1px solid #a9925c!important;
+  box-shadow:inset 0 1px 0 #ddc88c44,0 2px 9px #000b!important;
+}
+body.vli-v7-classic #hud {
+  background:linear-gradient(180deg,#4f4b37e8,#151a15e8)!important;
+  border:1px solid #a09065!important;
+  box-shadow:0 3px 8px #000b,inset 0 1px #d5c39455!important;
+}
+body.vli-v7-classic #hud .bar {
+  border:1px solid #9c8960!important;
+  box-shadow:inset 0 0 0 1px #0d100e!important;
+}
+body.vli-v7-classic #panel {
+  background:linear-gradient(155deg,#282c24 0%,#151c16 44%,#0d100e 100%)!important;
+  border-left:2px solid #8e7d57!important;
+  box-shadow:inset 1px 0 #d2b97944,-3px 0 10px #0009!important;
+  color:#e9dfc0;
+}
+body.vli-v7-classic #panel .tab { color:#e9dfc0; }
+body.vli-v7-classic #tabs {
+  background:linear-gradient(#30352b,#11170f)!important;
+  border-top:1px solid #9b8657!important;
+  box-shadow:inset 0 1px #c9ad6b33!important;
+}
+body.vli-v7-classic #tabs button:hover { background:#c5a66822; }
+body.vli-v7-classic #tabs button.on { color:#f4d590!important; }
+body.vli-v7-classic #pad .pbtn {outline:1px solid #16130c;outline-offset:1px;transition:filter .12s,border-color .12s}
+body.vli-v7-classic #pad .pbtn:hover {filter:brightness(1.2)}
+body.vli-v7-classic #pad .pbtn:focus-visible {outline:2px solid #f4d590;outline-offset:2px}
+body.vli-v7-classic #modal .mbox {
+  background:linear-gradient(150deg,#30352b,#101610 70%)!important;
+  border:2px solid #93835e!important;
+  box-shadow:inset 0 0 0 1px #b9a16e44,0 12px 30px #000d!important;
+}
+body.vli-v7-classic #modal #mBody > h3:first-child {
+  color:#f5dc9e!important;
+  border-bottom:1px solid #9b8758!important;
+  background:linear-gradient(180deg,#545842,#2d3228)!important;
+}
+@media (prefers-reduced-motion: reduce) {
+  body.vli-v7-classic #pad .pbtn { transition:none!important; }
+}

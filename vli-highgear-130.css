@@ -1,0 +1,27 @@
+/* Scoped: the JXWEB level-130+ catalogue does not modify normal combat UI. */
+#vli-gear-open{border:1px solid #9a742f;color:#ffdfa0;background:linear-gradient(145deg,#35210f,#131914);border-radius:6px;padding:5px 10px;cursor:pointer;font-weight:700;white-space:nowrap}
+#vli-gear-open:hover{background:#4a321a;border-color:#e7ac40}
+body.u20 #vli-gear-open{display:none!important}
+#vli-gear-dock{background-position:center;background-repeat:no-repeat;background-size:74% 74%;border-color:#c69b3d!important}
+#vli-gear-dock:hover{box-shadow:0 0 9px #e5aa45aa}
+#vli-gear-fab{display:none;position:fixed;right:10px;bottom:122px;z-index:42;align-items:center;gap:4px;padding:9px 11px;border:1px solid #c89a3b;background:linear-gradient(135deg,#342513,#1b2322);color:#f5d18b;box-shadow:0 2px 8px #000b;border-radius:23px;font-size:12px;font-weight:750;cursor:pointer}
+body.u2m #vli-gear-fab{display:flex}
+body.u20 #vli-gear-fab{display:flex;top:213px;bottom:auto;right:12px}
+.hg-root{color:#e9e1cf;min-width:0}.hg-root h3{margin:0 0 8px;color:#ffe2a1}
+.hg-root .desc{font-size:12px;color:#c8cfcb}.hg-root .hg-kinds{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+.hg-root button{cursor:pointer}.hg-root .hg-kinds button,.hg-root .hg-paging button{padding:6px 9px;border-radius:5px;border:1px solid #576260;background:#1c2928;color:#e6e7d5}
+.hg-root .hg-kinds button.active,.hg-root .hg-item.active{border-color:#ffd77d;background:#40331b}
+.hg-root .hg-filters{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}.hg-root .hg-filters label{display:flex;flex-direction:column;min-width:120px;flex:1;font-size:11px;color:#b9c8c5;gap:3px}
+.hg-root select,.hg-root input{width:100%;box-sizing:border-box;min-height:30px;border:1px solid #6b705e;border-radius:4px;padding:4px;background:#182324;color:#eee}
+.hg-root .hg-results{font-size:12px;margin:10px 0;color:#dcb76b}.hg-root .hg-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:5px;max-height:min(280px,37vh);overflow-y:auto;padding:4px}
+.hg-root .hg-item{display:flex;gap:7px;align-items:center;min-height:53px;padding:4px 6px;color:#ece4d0;background:#172221;border:1px solid #3b504a;border-radius:5px;text-align:left;min-width:0}
+.hg-root .hg-item img{width:37px;height:37px;flex:0 0 37px;object-fit:contain;image-rendering:auto}.hg-root .hg-item span{min-width:0}.hg-root .hg-item b{display:block;font-size:11px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;max-width:195px}.hg-root .hg-item small{display:block;color:#c6a56c;font-size:10px}
+.hg-root .hg-paging{display:flex;justify-content:space-between;margin:7px 2px}.hg-root button:disabled{opacity:.43;cursor:not-allowed}
+.hg-root .hg-detail{display:flex;gap:10px;border:1px solid #6a542e;background:#241f1b;border-radius:7px;padding:9px;margin:10px 0;font-size:12px}
+.hg-root .hg-detail img{width:56px;height:56px;object-fit:contain;flex:0 0 56px}.hg-root .hg-detail p{margin:5px 0;color:#d6d4c5}
+.hg-root .hg-primary{display:block;width:100%;padding:10px;color:#241709;background:linear-gradient(#e9c273,#d49a3a);border:1px solid #e3be6d;font-weight:800;border-radius:5px}
+.hg-root .hg-note{font-size:11px;color:#bfc9c4;line-height:1.6}.hg-root .hg-close{display:block;margin-left:auto;border:1px solid #777;background:#263432;color:#eee;border-radius:4px;padding:7px 15px}
+@media(max-width:600px){.hg-root .hg-items{grid-template-columns:1fr 1fr;max-height:28vh}.hg-root .hg-item b{max-width:130px}.hg-root .hg-filters{gap:5px}.hg-root .hg-filters label{min-width:96px}}
+
+/* V12.1: AdminCP is the sole entry to equipment 130+. */
+#vli-gear-fab,#vli-gear-open,#vli-gear-dock{display:none!important;}

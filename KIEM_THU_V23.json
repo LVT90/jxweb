@@ -1,0 +1,461 @@
+{
+  "errors": [],
+  "consoleErrors": [],
+  "missing": [],
+  "checks": [
+    {
+      "name": "PC shell active",
+      "pass": true
+    },
+    {
+      "name": "PC bitmaps load",
+      "pass": true,
+      "detail": [
+        {
+          "file": "inventory.webp",
+          "loaded": true,
+          "width": 223,
+          "height": 349
+        },
+        {
+          "file": "character.webp",
+          "loaded": true,
+          "width": 428,
+          "height": 430
+        },
+        {
+          "file": "skills.webp",
+          "loaded": true,
+          "width": 205,
+          "height": 376
+        },
+        {
+          "file": "hud.webp",
+          "loaded": true,
+          "width": 800,
+          "height": 600
+        },
+        {
+          "file": "health.webp",
+          "loaded": true,
+          "width": 107,
+          "height": 30
+        },
+        {
+          "file": "mana.webp",
+          "loaded": true,
+          "width": 107,
+          "height": 30
+        },
+        {
+          "file": "close.webp",
+          "loaded": true,
+          "width": 22,
+          "height": 22
+        },
+        {
+          "file": "pc-frame-nine-slice.webp",
+          "loaded": true,
+          "width": 96,
+          "height": 96
+        }
+      ]
+    },
+    {
+      "name": "Open char",
+      "pass": true
+    },
+    {
+      "name": "Bounds char",
+      "pass": true,
+      "detail": {
+        "x": 778,
+        "y": 180,
+        "width": 428,
+        "height": 430
+      }
+    },
+    {
+      "name": "Open inv",
+      "pass": true
+    },
+    {
+      "name": "Bounds inv",
+      "pass": true,
+      "detail": {
+        "x": 983,
+        "y": 160,
+        "width": 223,
+        "height": 462
+      }
+    },
+    {
+      "name": "Open skill",
+      "pass": true
+    },
+    {
+      "name": "Bounds skill",
+      "pass": true,
+      "detail": {
+        "x": 1001,
+        "y": 160,
+        "width": 205,
+        "height": 376
+      }
+    },
+    {
+      "name": "Open quest",
+      "pass": true
+    },
+    {
+      "name": "Bounds quest",
+      "pass": true,
+      "detail": {
+        "x": 778,
+        "y": 180,
+        "width": 428,
+        "height": 508
+      }
+    },
+    {
+      "name": "Open forge",
+      "pass": true
+    },
+    {
+      "name": "Bounds forge",
+      "pass": true,
+      "detail": {
+        "x": 778,
+        "y": 180,
+        "width": 428,
+        "height": 476.71875
+      }
+    },
+    {
+      "name": "Open more",
+      "pass": true
+    },
+    {
+      "name": "Bounds more",
+      "pass": true,
+      "detail": {
+        "x": 778,
+        "y": 180,
+        "width": 428,
+        "height": 508
+      }
+    },
+    {
+      "name": "Skill 120 and 150 available",
+      "pass": true,
+      "detail": [
+        {
+          "id": 709,
+          "n": "Đại Thừa Như Lai Chú",
+          "req": 120
+        },
+        {
+          "id": 751,
+          "n": "Đại Lực Kim Cang Chưởng",
+          "req": 150
+        },
+        {
+          "id": 752,
+          "n": "Vi Đà Hiến Xử",
+          "req": 150
+        },
+        {
+          "id": 753,
+          "n": "Tam Giới Quy Thiền",
+          "req": 150
+        }
+      ]
+    },
+    {
+      "name": "High gear catalogue",
+      "pass": true
+    },
+    {
+      "name": "Action tk",
+      "pass": true,
+      "detail": "CHIẾN TRƯỜNG TỐNG KIM\n\nHai nước Tống – Kim giao tranh khốc liệt tại chiến địa biên giới! Hãy chọn phe gia nhập và lập cô"
+    },
+    {
+      "name": "Action gear",
+      "pass": true,
+      "detail": "✦ Kho trang bị cấp 130–180 · JXWEB\n\nDữ liệu trang bị JXWEB, sử dụng trong Võ Lâm Idle offline. Cấp yêu cầu là cấp nhân v"
+    },
+    {
+      "name": "Action auto",
+      "pass": true,
+      "detail": "Cơ bản\nKỹ năng\nNhặt đồ\nKhác\nTự đánh\n Tự đánh quái (Auto) · phím F\n Tự đổi bãi luyện công theo cấp\n Đánh tiếp cận (chạy s"
+    },
+    {
+      "name": "Action activities",
+      "pass": true,
+      "detail": "Hoạt động 9.972 vạn lượng\nPhó bản\nĐi thuyền\nTháp\nBoss tuần\nMã trường\nĐồng hành\n\nPhó bản: quái tinh anh cấp cố định theo "
+    },
+    {
+      "name": "Action gift",
+      "pass": true,
+      "detail": "🎁 Phần thưởng Phúc Duyên 0\nĐiểm danh 1\nMốc cấp 16\nPhúc Duyên\nSự kiện\nThành tựu\n\nChuỗi 1 ngày · tổng 1 ngày. Mốc 10 / 20"
+    },
+    {
+      "name": "Action ktc",
+      "pass": true,
+      "detail": "Kỳ Trân Các\nTiện ích\nQuý hiếm\nĐặc biệt\nThú cưỡi\n Kim Nguyên Bảo: 100000 · Ngân lượng: 9972 vạn 0 lượng\nKim Nguyên Bảo\nGi"
+    },
+    {
+      "name": "Action admin",
+      "pass": true,
+      "detail": "令\nVÕ LÂM IDLE · OFFLINE · PHIÊN BẢN ADMINCP 7.0.0\nADMIN CONTROL PANEL\n\nNhân vật: Kiểm thử V23 · Thiếu Lâm phái · cấp 150"
+    },
+    {
+      "name": "Action team",
+      "pass": true,
+      "detail": "Tổ đội\n\nChức năng tổ đội đã bị khóa trong nguồn V6. Bản offline hiện tại không có kết nối người chơi để mời hoặc lập nhó"
+    },
+    {
+      "name": "Main hotbar opens skill window",
+      "pass": true
+    },
+    {
+      "name": "F7 opens skills",
+      "pass": true
+    },
+    {
+      "name": "Escape closes PC window",
+      "pass": true
+    },
+    {
+      "name": "PC window drag",
+      "pass": true,
+      "detail": {
+        "beforeDrag": {
+          "x": 778,
+          "y": 180,
+          "width": 428,
+          "height": 430
+        },
+        "afterDrag": {
+          "x": 628,
+          "y": 200,
+          "width": 428,
+          "height": 430
+        }
+      }
+    },
+    {
+      "name": "Character footer opens bag",
+      "pass": true
+    },
+    {
+      "name": "Learn 150 from PC button",
+      "pass": true
+    },
+    {
+      "name": "Wrong weapon rejected by unchanged engine",
+      "pass": true
+    },
+    {
+      "name": "Primary skill 150 from native dialog",
+      "pass": true
+    },
+    {
+      "name": "Auto keeps selected 150",
+      "pass": true
+    },
+    {
+      "name": "Learn 120 from PC button",
+      "pass": true
+    },
+    {
+      "name": "Create real 130 gear",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "items": [
+          {
+            "uid": 4,
+            "d": 4,
+            "k": 1,
+            "n": "Tử Mãng Đông Li Hạng Liên",
+            "ic": "img/i/g26.png",
+            "lvl": 10,
+            "s": 3,
+            "price": 99999,
+            "base": [],
+            "req": [
+              [
+                36,
+                130
+              ],
+              [
+                39,
+                10
+              ]
+            ],
+            "r": 4,
+            "set": {
+              "kind": "gold",
+              "grp": 354,
+              "n1": 4,
+              "n2": 7,
+              "sid": 1
+            },
+            "mag": [
+              {
+                "a": 233,
+                "p": [
+                  498,
+                  -1,
+                  0
+                ],
+                "pre": 1
+              },
+              {
+                "a": 232,
+                "p": [
+                  44,
+                  -1,
+                  0
+                ],
+                "pre": 1
+              },
+              {
+                "a": 235,
+                "p": [
+                  554,
+                  -1,
+                  0
+                ],
+                "pre": 1
+              },
+              {
+                "a": 108,
+                "p": [
+                  56,
+                  -1,
+                  0
+                ],
+                "pre": 1
+              },
+              {
+                "a": 241,
+                "p": [
+                  23,
+                  -1,
+                  0
+                ],
+                "pre": 1
+              },
+              {
+                "a": 226,
+                "p": [
+                  1,
+                  -1,
+                  0
+                ],
+                "pre": 1
+              }
+            ],
+            "ext": [
+              {
+                "a": 139,
+                "p": [
+                  1,
+                  -1,
+                  1372
+                ],
+                "pre": 1
+              },
+              {
+                "a": 227,
+                "p": [
+                  1,
+                  -1,
+                  0
+                ],
+                "pre": 1
+              }
+            ],
+            "vliHigh130": 1,
+            "vliAdmin130": 1,
+            "lock": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Inventory item opens native details",
+      "pass": true
+    },
+    {
+      "name": "Join Tong Kim from PC entry",
+      "pass": true
+    },
+    {
+      "name": "Tong Kim simulation advances",
+      "pass": true
+    },
+    {
+      "name": "Return from Tong Kim",
+      "pass": true
+    },
+    {
+      "name": "Viewport 800",
+      "pass": true,
+      "detail": {
+        "pc": true,
+        "padParent": "pc23-hud"
+      }
+    },
+    {
+      "name": "Viewport 1024",
+      "pass": true,
+      "detail": {
+        "pc": true,
+        "padParent": "pc23-hud"
+      }
+    },
+    {
+      "name": "Viewport 1920",
+      "pass": true,
+      "detail": {
+        "pc": true,
+        "padParent": "pc23-hud"
+      }
+    },
+    {
+      "name": "Viewport 390",
+      "pass": true,
+      "detail": {
+        "pc": false,
+        "padParent": "battle"
+      }
+    },
+    {
+      "name": "No V23 errors",
+      "pass": true
+    },
+    {
+      "name": "Offline game mode",
+      "pass": true
+    }
+  ],
+  "externalRequests": [],
+  "skillModalButtons": [
+    {
+      "id": "skMain",
+      "text": "Chọn làm chiêu chính"
+    },
+    {
+      "id": "skPlus",
+      "text": "+ Cộng điểm"
+    },
+    {
+      "id": "skMinus",
+      "text": "− Rút điểm"
+    }
+  ]
+}

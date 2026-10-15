@@ -1,0 +1,81 @@
+/* VLI V8 JX classic desktop skin. Uses V6 local assets and V6 event handlers.
+   NO game/combat data or save logic is modified by this stylesheet. */
+body.v8-jx.u20{font-family:Tahoma,Arial,sans-serif!important;--v8gold:#e5c37d;--v8silver:#abb7b5;--v8black:#060908}
+body.v8-jx.u20 #app,body.v8-jx.u20 #battle{width:100vw!important;height:100vh!important}
+body.v8-jx.u20 #bg{filter:none!important}
+/* full-width VLTK HP / MP / XP display */
+body.v8-jx.u20 #hud{position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;height:20px!important;min-height:20px!important;z-index:20!important;gap:4px!important;padding:2px 4px!important;background:linear-gradient(#2d3230,#070c0a 65%,#202920)!important;border:1px solid #797968!important;border-top:0!important;border-radius:0!important;transform:none!important;box-shadow:0 1px 2px #000c!important;pointer-events:none!important}
+body.v8-jx.u20 #hud .jxs{height:15px!important;font:700 10px Tahoma,Arial,sans-serif!important;color:#e4d6a4!important}
+body.v8-jx.u20 #hud .jxs b{min-width:22px;height:14px!important;line-height:12px!important;border:1px solid #a49359!important;color:#cdf19d!important}
+body.v8-jx.u20 #hud .bar{height:14px!important;min-height:14px!important;flex:1 1 auto!important;background:#050b09!important;border:1px solid #849488!important;box-shadow:inset 0 0 0 1px #000,0 0 1px #000!important}
+body.v8-jx.u20 #hud .bar i{inset:1px!important;height:10px!important;transition:width .13s linear}
+body.v8-jx.u20 #hud .bar span{font:700 9px/12px Tahoma,Arial,sans-serif!important;letter-spacing:.1px}
+body.v8-jx.u20 #hud #u20rank{display:none!important}
+/* left character / gameplay selector, like the reference screenshot */
+#v8left{display:none}
+body.v8-jx.u20 #v8left{display:block;position:fixed;z-index:18;left:3px;top:21px;width:320px;pointer-events:none;color:#f9e3a0;font:12px/1.2 Tahoma,Arial,sans-serif;text-shadow:1px 1px 2px #000,-1px -1px 2px #000}
+#v8left .v8name{font-size:12px;font-weight:700;color:#f7e4ab;letter-spacing:.15px}
+#v8left .v8main{font-size:11px;color:#d8e0d4;margin-top:3px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+#v8left .v8currency{color:#f8d26c}
+#v8left .v8actions{display:flex;gap:4px;align-items:flex-start;margin:6px 0 2px;pointer-events:auto}
+#v8left .v8action{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:2px;border:0!important;background:none!important;color:#dde1c7!important;font:700 9px/1.12 Tahoma,Arial,sans-serif!important;width:48px;height:47px;cursor:pointer;white-space:nowrap;text-shadow:1px 1px 2px #000}
+#v8left .v8action:hover{color:#ffe498!important;filter:brightness(1.24)}
+#v8left .v8action .v8ico{display:grid;place-items:center;width:28px;height:28px;background:radial-gradient(circle at 40% 25%,#194a45,#021a13 70%);border:1px solid #928356;box-shadow:0 0 0 1px #050707,inset 0 1px 0 #7c9d8573;border-radius:4px;font-size:17px}
+#v8left .v8action.on .v8ico{border-color:#fbd163;box-shadow:0 0 0 1px #090904,0 0 6px #e8ba46cc}
+#v8left .v8note{display:inline-block;padding:2px 6px;background:#080b08d1;border:1px solid #82744291;color:#ffe36e;font-size:10px;font-weight:700;pointer-events:none}
+/* Original controls remain wired; the matching V8 shortcuts expose them. */
+body.v8-jx.u20 #u20r,body.v8-jx.u20 #u20gold,body.v8-jx.u20 #u20menu,body.v8-jx.u20 #u20rc,body.v8-jx.u20 #u20side,body.v8-jx.u20 #modeSw,body.v8-jx.u20 #vli-tk-fab{display:none!important}
+body.v8-jx.u20 #u20zone{position:fixed!important;right:9px!important;top:205px!important;width:150px!important;z-index:18!important}
+body.v8-jx.u20 #u20zb{font-size:10px!important;padding:2px 4px!important;min-height:20px!important;height:20px!important;background:linear-gradient(#394338,#101b16)!important;border:1px solid #9d8f5a!important;color:#f5e5b0!important;text-align:center!important}
+body.v8-jx.u20 #u20zl{max-height:55vh!important;overflow-y:auto!important;z-index:60!important}
+/* canvas draws the minimap; these elements frame it instead of covering it */
+#v8maptitle,#v8mapframe{display:none}
+body.v8-jx.u20 #v8maptitle{display:flex;align-items:center;justify-content:center;position:fixed;right:8px;top:22px;width:152px;height:28px;background:url(ui/jx1/ornt2.png) center top/214px 30px no-repeat,linear-gradient(#343b31,#171c16);border:1px solid #766c51;box-shadow:0 1px 5px #000c;color:#ffe6ae;text-shadow:0 1px #000;font:700 11px Tahoma,Arial,sans-serif;z-index:9;pointer-events:none;overflow:hidden}
+body.v8-jx.u20 #v8mapframe{display:block;position:fixed;top:50px;right:6px;width:156px;height:156px;border:3px double #989170;box-shadow:inset 0 0 0 1px #000,0 1px 8px #000d;pointer-events:none;z-index:8}
+/* right-side vertically stacked shortcuts */
+#v8right{display:none}
+body.v8-jx.u20 #v8right{display:flex;position:fixed;top:238px;right:1px;z-index:18;flex-direction:column;gap:5px;width:52px;pointer-events:auto}
+#v8right .v8side{height:39px;width:50px;display:flex;flex-direction:column;align-items:center;gap:1px;justify-content:center;font:700 9px/1.1 Tahoma,Arial,sans-serif!important;text-shadow:0 1px 2px #000;color:#d9e0cd;cursor:pointer;border:0!important;background:none!important}
+#v8right .v8side i{font-style:normal;display:grid;place-items:center;width:23px;height:23px;font-size:16px;background:radial-gradient(#3d6b49,#101712 68%);border:1px solid #6e7a4f;border-radius:4px;box-shadow:inset 0 1px #9caa7277,0 1px 2px #000a}
+#v8right .v8side:hover{filter:brightness(1.3);color:#ffdb93}
+/* small notices in upper-left; clicking 'Nhat ky' on right opens full chat */
+body.v8-jx.u20 #u20log{position:fixed!important;top:145px!important;left:3px!important;right:auto!important;bottom:auto!important;width:330px!important;max-width:330px!important;z-index:11!important;pointer-events:none!important}
+body.v8-jx.u20 #u20ct,body.v8-jx.u20 #u20in{display:none!important}
+body.v8-jx.u20 #u20lines{height:95px!important;max-height:95px!important;min-height:0!important;padding:3px 5px!important;overflow:hidden!important;background:linear-gradient(90deg,#090d08cc 0%,#070b0788 70%,transparent 100%)!important;border:0!important;color:#f0c95c!important;font:11px/16px Tahoma,Arial,sans-serif!important;pointer-events:none!important;text-shadow:0 1px 2px #000!important}
+body.v8-jx.u20.v8-logopen #u20log{top:auto!important;bottom:84px!important;left:5px!important;width:450px!important;max-width:450px!important;z-index:51!important;pointer-events:auto!important;background:#090d09ed;border:1px solid #a19059;box-shadow:0 2px 18px #000b}
+body.v8-jx.u20.v8-logopen #u20ct,body.v8-jx.u20.v8-logopen #u20in{display:flex!important}
+body.v8-jx.u20.v8-logopen #u20lines{height:230px!important;max-height:230px!important;overflow-y:auto!important;pointer-events:auto!important;background:#0b110af0!important}
+/* full-width ornamental bottom skill bar, with original interactive buttons kept intact */
+#v8bar{display:none}
+body.v8-jx.u20 #v8bar{display:flex;align-items:center;justify-content:center;gap:5px;position:fixed;z-index:19;left:50%;bottom:0;transform:translateX(-50%);width:min(875px,95vw);height:65px;padding:7px 14px 5px;pointer-events:none;background:linear-gradient(0deg,#030506 0%,#08110e 60%,#050808c9 84%,transparent 100%);border-bottom:3px solid #54685d;box-shadow:0 7px 16px #000c}
+body.v8-jx.u20 #v8bar::before{content:"";position:absolute;top:-6px;left:12px;right:12px;height:29px;z-index:0;pointer-events:none;background:url(ui/jx1/ornt2.png) center top/214px 30px repeat-x;filter:drop-shadow(0 2px 1px #000)}
+body.v8-jx.u20 #v8bar::after{content:"";position:absolute;z-index:0;left:50%;top:-15px;transform:translateX(-50%);width:214px;height:30px;pointer-events:none;background:url(ui/jx1/ornb.png) center/214px 30px no-repeat}
+body.v8-jx.u20 #v8bar .v8wing{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:center;gap:2px;height:52px;padding:7px 0 2px;pointer-events:auto;flex:1 1 0;min-width:0}
+body.v8-jx.u20 #v8bar .v8tile{display:flex;align-items:center;justify-content:center;flex:0 1 32px;min-width:24px;height:34px;position:relative;border:1px solid #51625a!important;border-radius:0!important;background:#030b09!important;box-shadow:inset 0 0 0 1px #030403,0 0 0 1px #000;cursor:pointer;padding:0!important;color:#dfd9b7}
+body.v8-jx.u20 #v8bar .v8tile:focus-visible{outline:2px solid #eacc7b!important;outline-offset:2px}
+body.v8-jx.u20 #v8bar .v8tile:hover{border-color:#d2b470!important;box-shadow:0 0 6px #e4c16a88!important}
+body.v8-jx.u20 #v8bar .v8tileico{display:block;width:24px;height:24px;flex:none;background-size:72px 24px;background-repeat:no-repeat;background-position:0 0;image-rendering:auto}
+body.v8-jx.u20 #v8bar .v8tile .v8mini{position:absolute;left:2px;bottom:1px;font:700 8px/1 Tahoma;color:#f0d883;text-shadow:0 1px 2px #000}
+body.v8-jx.u20 #v8bar .v8center{position:relative;z-index:2;flex:none;display:flex;align-items:flex-end;justify-content:center;pointer-events:auto;padding-bottom:1px}
+body.v8-jx.u20 #v8bar #pad{position:relative!important;left:auto!important;right:auto!important;bottom:auto!important;top:auto!important;transform:none!important;display:flex!important;align-items:flex-end!important;justify-content:center!important;flex-wrap:nowrap!important;width:auto!important;height:52px!important;margin:0!important;padding:9px 6px 2px!important;background:linear-gradient(#38423b,#06100b 35%,#030504 100%)!important;border:2px ridge #a0a69a!important;box-shadow:0 0 0 1px #060807,0 0 11px #000e!important;pointer-events:auto!important}
+body.v8-jx.u20 #pad .hb{gap:2px}
+body.v8-jx.u20 #pad .hb+.hb{margin-left:4px;padding-left:4px;border-left:1px solid #5a6f64}
+body.v8-jx.u20 #pad .pbtn{width:34px!important;height:34px!important;flex:none!important;border:1px solid #6b756c!important;background:#030605!important;box-shadow:inset 0 0 0 1px #000!important}
+body.v8-jx.u20 #pad .pbtn.mn{width:48px!important;height:48px!important;margin-top:-12px!important;border:2px ridge #b0bbab!important;box-shadow:0 0 6px #c5dac277,inset 0 0 0 2px #08130e!important}
+body.v8-jx.u20 #pad .pbtn.cur,body.v8-jx.u20 #pad .pbtn.mn:hover{border-color:#f9d77b!important;box-shadow:0 0 9px #ffcd61b0!important}
+body.v8-jx.u20 #pad .pbtn:not(.mn):hover{border-color:#f3d387!important;filter:brightness(1.2)}
+/* controls immediately above the skillbar; still original Auto, rotation and mount handlers */
+body.v8-jx.u20 #topCtl{position:fixed!important;left:50%!important;right:auto!important;top:auto!important;bottom:71px!important;transform:translateX(-50%)!important;z-index:22!important;display:flex!important;gap:4px!important;align-items:center!important;opacity:.9}
+body.v8-jx.u20 #topCtl .chip{font-size:10px!important;min-height:23px!important;padding:2px 6px!important;border:1px solid #867755!important;white-space:nowrap}
+body.v8-jx.u20 #topCtl:hover{opacity:1}
+body.v8-jx.u20 #panel{border:2px solid #8b8674!important;background:linear-gradient(#292e29,#111710 30%,#0a0e0b)!important;box-shadow:inset 0 0 0 1px #b5a17166,0 12px 30px #000e!important}
+body.v8-jx.u20 #u20wh{background:url(ui/jx1/ornt2.png) center/214px 30px no-repeat,linear-gradient(#595949,#282a22)!important;color:#ffe5a4!important;text-shadow:1px 1px 2px #000!important}
+body.v8-jx.u20 .u2bag .invgrid,body.v8-jx.u20 .u2doll{border:2px ridge #897e5c!important;background-color:#0e120d!important}
+body.v8-jx.u20 .u2k.main,body.v8-jx.u20 .u2s:hover,body.v8-jx.u20 .u2card:hover{border-color:#eccb7e!important}
+body.v8-jx.u20 #modal .mbox{border:2px ridge #95865d!important;background:linear-gradient(#31392e,#101612 22%,#10120d)!important;box-shadow:0 7px 26px #000d!important}
+body.v8-jx.u20 #skBuffs{top:115px!important;left:340px!important;right:auto!important}
+body.v8-jx.u20 #vli120Bar{top:160px!important;left:4px!important}
+@media(max-width:1250px){body.v8-jx.u20 #v8bar{width:min(720px,96vw)}body.v8-jx.u20 #v8bar .v8tile{min-width:22px;flex-basis:25px}body.v8-jx.u20 #v8left{width:290px}body.v8-jx.u20 #v8left .v8action{width:42px}}
+@media(max-height:680px){body.v8-jx.u20 #v8right{top:205px;gap:2px}body.v8-jx.u20 #v8right .v8side{height:35px}body.v8-jx.u20 #u20log{top:126px!important}body.v8-jx.u20 #v8left .v8actions{margin-top:3px}}
+/* narrow/mobile retains the original working mobile UI */
+body:not(.v8-jx) #v8left,body:not(.v8-jx) #v8right,body:not(.v8-jx) #v8bar,body:not(.v8-jx) #v8maptitle,body:not(.v8-jx) #v8mapframe{display:none!important}

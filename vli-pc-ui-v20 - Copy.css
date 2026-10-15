@@ -1,0 +1,76 @@
+/* VLI V20 - PC-inspired safe visual layer.
+   Real UI art from user supplied Ui.pak; no changes to game actions or saves.
+   Applies only when body.vli-pc-ui-v20 is set by js/vli-pc-ui-v20.js. */
+body.vli-pc-ui-v20 {--v20-pc-edge:#9b8354;--v20-pc-hi:#e8d09a;--v20-pc-ink:#090b09;--v20-pc-face:#29291f;}
+body.vli-pc-ui-v20.u20{font-family:Tahoma,"Microsoft Sans Serif",Arial,sans-serif!important;color:#e8ddb9!important}
+body.vli-pc-ui-v20.u20 #hud{
+ background:linear-gradient(180deg,#43453c 0%,#171e19 27%,#080c0b 75%,#313329 100%)!important;
+ border-bottom:2px ridge #9d8657!important;box-shadow:inset 0 1px #e2d8ae66,0 2px 5px #000!important;
+}
+body.vli-pc-ui-v20.u20 #hud .bar{border:1px solid #9c9479!important;border-radius:0!important;box-shadow:inset 0 0 0 1px #080b08,0 0 2px #000!important;}
+body.vli-pc-ui-v20.u20 #hud .bar.hp i{background:linear-gradient(#f65c37,#b6231d 53%,#72140d)!important}
+body.vli-pc-ui-v20.u20 #hud .bar.mp i{background:linear-gradient(#6ec4fb,#2871ce 52%,#103776)!important}
+body.vli-pc-ui-v20.u20 #hud .bar.xp i{background:linear-gradient(#ffe19a,#b78f32 50%,#7b5611)!important}
+body.vli-pc-ui-v20.v8-jx #v8mapframe{border:3px ridge #af965e!important;box-shadow:inset 0 0 0 1px #292016,0 3px 8px #000c,0 0 0 1px #1e160f!important}
+body.vli-pc-ui-v20.v8-jx #v8maptitle{color:#ffdb94!important;background:linear-gradient(180deg,#494333de,#181b14ed),url(ui/jx1/ornt2.png) center/100% auto!important;border:1px solid #a9905d!important;text-shadow:0 2px 2px #000!important;box-shadow:0 2px 5px #000b!important}
+body.vli-pc-ui-v20.v8-jx #v8left .v8name{color:#f8d486!important;text-shadow:0 1px 3px #000,0 0 5px #050505!important}
+body.vli-pc-ui-v20.v8-jx #v8left .v8action .v8ico{border:1px ridge #ae935a!important;border-radius:1px!important;background:linear-gradient(140deg,#4f6543,#15251b 60%,#050c08)!important;box-shadow:inset 0 0 0 1px #080d08,0 1px 3px #000d!important;color:#f5d08b!important}
+body.vli-pc-ui-v20.v8-jx #v8left .v8action:hover .v8ico{border-color:#f6d287!important;filter:brightness(1.25)}
+body.vli-pc-ui-v20.v8-jx #v8right .v8side i{border:1px ridge #af9a6e!important;border-radius:1px!important;background:linear-gradient(145deg,#566648,#182519 65%,#050805)!important;box-shadow:inset 0 0 0 1px #0b110b,0 1px 3px #000c!important}
+body.vli-pc-ui-v20.v8-jx #v8bar{background:linear-gradient(0deg,#070908 0%,#191c17 48%,#12180fdc 79%,transparent 100%)!important;border-bottom:3px ridge #ab8954!important;box-shadow:0 2px 12px #000d!important}
+body.vli-pc-ui-v20.v8-jx #v8bar .v8tile,body.vli-pc-ui-v20.v8-jx #pad .pbtn{border:1px solid #817450!important;border-radius:0!important;background:radial-gradient(#283223,#070907 77%)!important;box-shadow:inset 0 0 0 1px #10160e,0 0 0 1px #080907!important}
+body.vli-pc-ui-v20.v8-jx #v8bar .v8tile:hover,body.vli-pc-ui-v20.v8-jx #pad .pbtn:hover{border-color:#e4b86a!important;box-shadow:0 0 4px #eac77677,inset 0 0 0 1px #302619!important}
+body.vli-pc-ui-v20.v8-jx #pad .pbtn.cur,body.vli-pc-ui-v20.v8-jx #pad .pbtn.mn{border-color:#f6cd6e!important}
+/* Window dressing for the real interactive game panels - generic frame, not a fake nonfunctional screenshot. */
+body.vli-pc-ui-v20.u20 #panel,body.vli-pc-ui-v20.u20 #modal .mbox{
+ background:linear-gradient(145deg,#2e2c23 0%,#151a14 35%,#0a0e0b 100%)!important;
+ border:3px ridge #85734c!important;border-radius:2px!important;
+ box-shadow:inset 0 0 0 1px #ac9c69,0 0 0 2px #0b0b09,0 8px 18px #000d!important;
+ color:#e9d8af!important;
+}
+body.vli-pc-ui-v20.u20 #u20wh,body.vli-pc-ui-v20.u20 #modal #mBody>h3:first-child{background:linear-gradient(#57503e,#2b2a21 55%,#1a1b16)!important;border-bottom:1px solid #b19b67!important;color:#ecd7a0!important;text-shadow:0 1px 2px #000!important}
+body.vli-pc-ui-v20.u20 #panel .tab{scrollbar-color:#7d6e4a #111611}
+body.vli-pc-ui-v20.u20 .u2bag .invgrid{background:#5a523b!important;border:2px ridge #927d4e!important;gap:1px!important}
+body.vli-pc-ui-v20.u20 #panel .it,body.vli-pc-ui-v20.u20 #modal .it{border:1px solid #5f5941!important;background:radial-gradient(#1c2118,#080b08 75%)!important;box-shadow:inset 0 1px 5px #0009!important;border-radius:0!important}
+body.vli-pc-ui-v20.u20 #panel .it:hover,body.vli-pc-ui-v20.u20 #modal .it:hover{border-color:#e6bd6e!important}
+body.vli-pc-ui-v20.u20 #panel .it.r1{border-color:#62a0d6!important}
+body.vli-pc-ui-v20.u20 #panel .it.r2{border-color:#e2bf62!important}
+body.vli-pc-ui-v20.u20 #panel .it.r3{border-color:#b186db!important}
+body.vli-pc-ui-v20.u20 #panel .btn:not(.pcui-native-button),body.vli-pc-ui-v20.u20 #modal .btn:not(.pcui-native-button){background:linear-gradient(#66614b,#3b3a2e 50%,#28291e)!important;border:1px solid #a39a72!important;border-radius:1px!important;color:#f8e3af!important;text-shadow:0 1px 1px #000!important}
+body.vli-pc-ui-v20.u20 .u2k,body.vli-pc-ui-v20.u20 .v9-skill-tile{border:1px solid #87734e!important;background:linear-gradient(#212719,#070c09)!important;box-shadow:inset 0 0 0 1px #060807,inset 0 0 7px #000b!important;border-radius:0!important}
+body.vli-pc-ui-v20.u20 .u2k.main,body.vli-pc-ui-v20.u20 .v9-skill-tile.primary{border-color:#f4d181!important;box-shadow:0 0 5px #d3a74677,inset 0 0 0 1px #000!important}
+/* Original PC bitmap buttons: leave the actual click handlers intact. */
+body.vli-pc-ui-v20.u20 button.pcui-native-button{
+ box-sizing:content-box!important;display:inline-flex!important;justify-content:center!important;align-items:center!important;
+ padding:0!important;margin:0 2px!important;border:0!important;border-radius:0!important;
+ box-shadow:none!important;background-color:transparent!important;
+ background-image:var(--pcui-normal)!important;background-repeat:no-repeat!important;
+ background-size:100% 100%!important;vertical-align:middle!important;
+ color:transparent!important;font-size:0!important;line-height:0!important;text-shadow:none!important;
+ width:var(--pcui-w)!important;height:var(--pcui-h)!important;min-width:var(--pcui-w)!important;min-height:var(--pcui-h)!important;
+ max-width:var(--pcui-w)!important;max-height:var(--pcui-h)!important;
+ flex:0 0 var(--pcui-w)!important;outline-offset:2px!important;
+}
+body.vli-pc-ui-v20.u20 button.pcui-native-button:hover{background-image:var(--pcui-hover)!important;filter:brightness(1.05)}
+body.vli-pc-ui-v20.u20 button.pcui-native-button:active{background-image:var(--pcui-active)!important;transform:translateY(1px)!important}
+body.vli-pc-ui-v20.u20 button.pcui-native-button:disabled{opacity:.45!important;filter:grayscale(.8)}
+body.vli-pc-ui-v20.u20 #modal .mx,body.vli-pc-ui-v20.u20 #u20wx{background:transparent url(ui/pc-v20/native-pc-close-0.webp) center/22px 22px no-repeat!important;border:0!important;width:22px!important;height:22px!important;min-height:22px!important;color:transparent!important;font-size:0!important;box-shadow:none!important}
+body.vli-pc-ui-v20.u20 #modal .mx:hover,body.vli-pc-ui-v20.u20 #u20wx:hover{background-image:url(ui/pc-v20/native-pc-close-1.webp)!important}
+/* Optional toggle is attached to the original V8 toolbar or the top of the page. */
+#vli-pc-ui-v20-toggle{user-select:none;-webkit-user-select:none}
+#vli-pc-ui-v20-toggle[aria-pressed="true"] .v8ico{color:#ffe59d!important;border-color:#f4d58e!important}
+#top #vli-pc-ui-v20-toggle{border:1px solid #a58b58;border-radius:2px;padding:3px 7px;background:#1d281f;color:#e9d29a;font:11px Tahoma,Arial,sans-serif;white-space:nowrap}
+#top #vli-pc-ui-v20-toggle .v8ico{display:none}
+#vli-pc-ui-v20-gallery{position:fixed;inset:0;z-index:9999;background:#000d;display:flex;align-items:center;justify-content:center;padding:14px}
+#vli-pc-ui-v20-gallery .pcui-gallery-panel{background:linear-gradient(#343427,#101510);border:2px ridge #ac9161;color:#f1e0b8;box-shadow:0 20px 50px #000c;width:min(840px,96vw);max-height:94vh;overflow:auto;padding:13px;font:12px Tahoma,Arial,sans-serif}
+#vli-pc-ui-v20-gallery header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #7e6e4d;padding-bottom:8px;margin-bottom:12px}
+#vli-pc-ui-v20-gallery header button{background:#433929;border:1px solid #9c8350;color:#f1deb0;padding:3px 10px}
+#vli-pc-ui-v20-gallery .pcui-gallery-items{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+#vli-pc-ui-v20-gallery figure{padding:9px;background:#141b15;border:1px solid #6c634b;text-align:center}
+#vli-pc-ui-v20-gallery img{max-width:260px;max-height:55vh;object-fit:contain;image-rendering:auto}
+#vli-pc-ui-v20-gallery figcaption{padding-top:6px}
+@media(max-width:899px),(max-height:559px){
+ body.vli-pc-ui-v20 .pcui-native-button{all:revert}
+ #top #vli-pc-ui-v20-toggle{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){body.vli-pc-ui-v20 *{transition-duration:0s!important;animation-duration:.01ms!important}}

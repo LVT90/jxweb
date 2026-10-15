@@ -1,0 +1,12 @@
+/* Tống Kim icon from JXWEB public client asset: ui/tk_flag.svg. */
+#tkBtn{display:inline-flex;align-items:center;gap:5px}
+#tkBtn img,#vli-tk-fab img{display:inline-block;vertical-align:middle;flex-shrink:0}
+#vli-tk-dock img{height:27px;width:27px;object-fit:contain;filter:drop-shadow(0 0 2px #e6514b)}
+#vli-tk-dock{display:flex;align-items:center;justify-content:center;border:1px solid #bb4444!important;background-color:#3d211d!important}
+#vli-tk-dock:hover{background-color:#65322e!important}
+#vli-tk-fab{display:flex;position:fixed;right:12px;top:165px;bottom:auto;z-index:42;align-items:center;gap:6px;border:1px solid #d6744c;border-radius:24px;color:#ffe2ac;background:linear-gradient(135deg,#57291d,#242423);padding:8px 13px;box-shadow:0 2px 9px #000c;font-size:12px;font-weight:800;cursor:pointer}
+body.u2m #vli-tk-fab{display:flex;top:auto;bottom:172px}
+body.u20 #vli-tk-fab{display:flex}
+@media (max-width:520px){#vli-tk-fab{bottom:175px;right:7px}#vli-tk-fab img{height:20px;width:20px}}
+
+body.u20 #vli-tk-fab:hover{filter:brightness(1.18);border-color:#ffb262}

@@ -1,0 +1,68 @@
+{
+  "v": "12.2",
+  "rows": {
+    "0": 0,
+    "1": 4,
+    "2": 7,
+    "3": 3,
+    "4": 6,
+    "6": 10,
+    "7": 11,
+    "8": 12,
+    "9": 13,
+    "10": 3,
+    "11": 15,
+    "12": 6,
+    "13": 17,
+    "14": 18,
+    "15": 19,
+    "16": 20,
+    "17": 21,
+    "18": 22,
+    "19": 11,
+    "20": 11,
+    "21": 11,
+    "22": 23,
+    "23": 24,
+    "24": 25,
+    "25": 26,
+    "26": 27,
+    "27": 28,
+    "28": 29,
+    "29": 3,
+    "30": 11,
+    "31": 13,
+    "32": 17
+  },
+  "named_k5": {
+    "Ô Vân Đạp Tuyết": 5,
+    "Xích Thố": 13,
+    "Tuyệt ảnh": 3,
+    "Tuyệt Ảnh": 3,
+    "Đích Lô": 6,
+    "Chiếu Dạ Ngọc Sư Tử": 11
+  },
+  "variants": [
+    [
+      27,
+      26,
+      26,
+      "duongsa"
+    ],
+    [
+      28,
+      27,
+      26,
+      "nguphong"
+    ],
+    [
+      29,
+      28,
+      17,
+      "truydien"
+    ]
+  ],
+  "sprite_count": 45,
+  "original_rows": 25,
+  "note": "Resource-backed variants recolored from existing full animation sets. No claim of original source sprites for special models."
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiểm tra SPR PC Cái Bang cấp 150 — V24.5</title>
+<style>
+html,body{margin:0;padding:0;background:#0d1510;color:#e4cfa5;font:14px/1.45 Tahoma,Arial,sans-serif}
+main{max-width:1000px;margin:24px auto;padding:18px;border:1px solid #796643;background:#152119}
+h1{font-size:21px;margin:0 0 6px;color:#e6d59d}p{margin:6px 0 14px;color:#bbd0bd}
+label{display:inline-flex;gap:8px;align-items:center;margin:5px 12px 9px 0}
+select,button,input{font:inherit;background:#253526;color:#ecd4a3;border:1px solid #8e7956;padding:5px;border-radius:3px}
+button{cursor:pointer}button:hover{background:#3d573b}
+canvas{display:block;width:min(100%,900px);aspect-ratio:9/5;background:radial-gradient(ellipse at center,#343829,#101810);border:2px ridge #95815b}
+small{color:#d4b771}code{color:#a7dec7}.state{color:#d1e1ac}
+</style></head><body><main>
+<h1>Cái Bang 150 — hình SPR gốc từ client PC</h1>
+<p>5 sprite gốc trích từ <code>updatejx08.pak</code>; dùng từng khung hình và điểm neo gốc. Đây là trình xem hình, không thi triển chiêu trong game.</p>
+<label>Hiệu ứng <select id="role"><option value="cast_1073">1073 — Thi triển rồng lửa</option>
+<option value="fly_335">335 — Đầu rồng lửa 16 hướng</option><option value="hit_344">344 — Cột lửa phụ</option>
+<option value="fly_336">336 — Đạn Bổng Huýnh Lược Địa 16 hướng</option><option value="hit_336">336 — Nổ tia xanh</option></select></label>
+<label>Chất lượng <select id="quality"><option value="fit">H5 · 70%</option><option value="native">PC · gốc</option></select></label>
+<label>Hướng <select id="dir"></select></label>
+<button id="pause">Tạm dừng</button>
+<canvas id="stage" width="900" height="500" aria-label="Phát lại khung hình SPR"></canvas>
+<p class="state" id="state">Đang nạp ảnh…</p>
+<p><small>Lưu ý: Nhịp đạn bay/cột lửa của kỹ năng trong H5 được ghép theo cấu hình PC nhưng chưa thể khẳng định khớp 100% scheduler gốc của Sword3CTC.</small></p>
+</main><script>
+const METADATA={"cast_1073":{"native":{"f":"vli-pc-cai-bang-150-v245/assets/cast_1073_native.webp","n":26,"d":1,"w":150,"h":160,"ax":75.0,"ay":99.0,"ms":35},"fit":{"f":"vli-pc-cai-bang-150-v245/assets/cast_1073_fit.webp","n":26,"d":1,"w":105,"h":112,"ax":52.5,"ay":69.3,"ms":35}},"fly_335":{"native":{"f":"vli-pc-cai-bang-150-v245/assets/fly_335_native.webp","n":1,"d":16,"w":200,"h":200,"ax":100.0,"ay":108.0,"ms":55},"fit":{"f":"vli-pc-cai-bang-150-v245/assets/fly_335_fit.webp","n":1,"d":16,"w":140,"h":140,"ax":70.0,"ay":75.6,"ms":55}},"hit_344":{"native":{"f":"vli-pc-cai-bang-150-v245/assets/hit_344_native.webp","n":6,"d":1,"w":120,"h":130,"ax":56.0,"ay":96.0,"ms":100},"fit":{"f":"vli-pc-cai-bang-150-v245/assets/hit_344_fit.webp","n":6,"d":1,"w":84,"h":91,"ax":39.2,"ay":67.2,"ms":100}},"fly_336":{"native":{"f":"vli-pc-cai-bang-150-v245/assets/fly_336_native.webp","n":1,"d":16,"w":170,"h":170,"ax":87.0,"ay":118.0,"ms":55},"fit":{"f":"vli-pc-cai-bang-150-v245/assets/fly_336_fit.webp","n":1,"d":16,"w":119,"h":119,"ax":60.9,"ay":82.6,"ms":55}},"hit_336":{"native":{"f":"vli-pc-cai-bang-150-v245/assets/hit_336_native.webp","n":15,"d":1,"w":150,"h":140,"ax":75.0,"ay":110.0,"ms":40},"fit":{"f":"vli-pc-cai-bang-150-v245/assets/hit_336_fit.webp","n":15,"d":1,"w":105,"h":98,"ax":52.5,"ay":77.0,"ms":40}}};
+const view=document.getElementById('stage'),ctx=view.getContext('2d'),state=document.getElementById('state');
+const role=document.getElementById('role'),quality=document.getElementById('quality'),direction=document.getElementById('dir');
+const images={},loadStatus={};let paused=false,origin=performance.now();
+function refreshDirs(){const m=METADATA[role.value][quality.value];direction.replaceChildren();for(let i=0;i<m.d;i++){
+  const el=document.createElement('option');el.value=i;el.textContent='Hướng '+(i+1);direction.append(el);
+}}
+function fetchImage(){const m=METADATA[role.value][quality.value],f=m.f;
+ if(!images[f]){const img=new Image();images[f]=img;loadStatus[f]='loading';img.onload=()=>loadStatus[f]='ready';img.onerror=()=>loadStatus[f]='error';img.src=f;}
+ return images[f];}
+function change(){origin=performance.now();refreshDirs();fetchImage();}
+role.addEventListener('change',change);quality.addEventListener('change',change);direction.addEventListener('change',()=>{origin=performance.now();});
+document.getElementById('pause').onclick=function(){paused=!paused;this.textContent=paused?'Tiếp tục':'Tạm dừng';origin=performance.now();};
+refreshDirs();fetchImage();
+function draw(now){requestAnimationFrame(draw);const m=METADATA[role.value][quality.value],img=fetchImage();ctx.clearRect(0,0,900,500);
+ctx.fillStyle='#22301c';ctx.fillRect(0,0,900,500);ctx.strokeStyle='#627052';ctx.lineWidth=1;
+ctx.beginPath();ctx.moveTo(0,340);ctx.lineTo(900,340);ctx.stroke();
+const fr=paused?0:Math.floor((now-origin)/m.ms)%m.n,di=+direction.value||0;
+if(img.complete&&img.naturalWidth){const x=450-m.ax*1.35,y=305-m.ay*1.35;
+ctx.drawImage(img,fr*m.w,di*m.h,m.w,m.h,x,y,m.w*1.35,m.h*1.35);
+state.textContent=role.options[role.selectedIndex].text+' · '+m.n+' khung/hướng · '+m.d+' hướng · '+m.w+' × '+m.h+' · '+m.ms+' ms/khung · Khung '+(fr+1)+'/'+m.n;
+}else{state.textContent='Đang nạp: '+m.f+' ('+(loadStatus[m.f]||'waiting')+')';}}
+requestAnimationFrame(draw);
+</script></body></html>

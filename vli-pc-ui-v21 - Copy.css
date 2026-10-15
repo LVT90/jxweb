@@ -1,0 +1,292 @@
+/* VLI V21 PC full-layout overlay. Only presentational selectors.
+   Texture/borders/buttons derived from user-supplied Ui.pak. All game input
+   elements remain the original H5 nodes, with their original event listeners. */
+#v21-dock,#v21-toggle{display:none}
+@media (min-width:900px) and (min-height:560px){
+ body.vli-pc-ui-v21.u20{
+   --v21-ink:#0d120e;--v21-gold:#f5d58a;--v21-bronze:#9c8758;
+   --v21-line:#665939;--v21-face:#1a1e17;--v21-sage:#b9bf9c;
+   font-family:Tahoma,"Microsoft Sans Serif",Arial,sans-serif!important;
+   color:#e3d3a6!important;
+ }
+ /* Real original controls, styled as a recognisable PC game main screen. */
+ body.vli-pc-ui-v21.u20 #hud{
+   background:linear-gradient(#33362d,#141812 26%,#080d0a 80%,#262820)!important;
+   border:2px ridge var(--v21-bronze)!important;border-top:0!important;
+   box-shadow:0 3px 8px #000b,inset 0 1px #e7d19570!important;
+   padding:4px 10px!important;gap:7px!important;
+ }
+ body.vli-pc-ui-v21.u20 #hud .bar{border-radius:1px!important;border:1px solid #857449!important;background:#060807!important;box-shadow:inset 0 0 0 1px #000,0 0 1px #cfb87a!important}
+ body.vli-pc-ui-v21.u20 #hud .bar.hp i{background:linear-gradient(#ff7e51,#cb3225 45%,#721408)!important}
+ body.vli-pc-ui-v21.u20 #hud .bar.mp i{background:linear-gradient(#95d9ff,#347fb7 45%,#162e7c)!important}
+ body.vli-pc-ui-v21.u20 #hud .bar.xp i{background:linear-gradient(#fff2ab,#b39035 60%,#6b4c19)!important}
+ body.vli-pc-ui-v21.v8-jx #v8mapframe{
+   border:5px ridge #af9a6b!important;
+   background:linear-gradient(135deg,#24291bcc,#0b130dbb)!important;
+   box-shadow:0 0 0 2px #14150d,inset 0 0 0 1px #30271b,0 5px 15px #000b!important
+ }
+ body.vli-pc-ui-v21.v8-jx #v8maptitle{
+   background:linear-gradient(#554d33,#24251b),url(ui/pc-v21/native-pc-frame-v21.webp)!important;
+   background-blend-mode:normal!important;
+   border:2px ridge #a18c5d!important;
+   color:#ffdf94!important;
+ }
+ body.vli-pc-ui-v21.v8-jx #v8left .v8actions{gap:1px!important}
+ body.vli-pc-ui-v21.v8-jx #v8left .v8action .v8ico,
+ body.vli-pc-ui-v21.v8-jx #v8right .v8side i{
+   border:1px solid #937e51!important;border-radius:2px!important;
+   background:radial-gradient(#4e5a3e,#0a140f 75%)!important;
+   box-shadow:inset 0 0 0 1px #090d09,0 2px 4px #000a!important;
+   color:#f6d68b!important;
+ }
+ body.vli-pc-ui-v21.v8-jx #v8bar{
+   background:linear-gradient(0deg,#040804 0%,#171b14 54%,#2c3227d9 79%,transparent 100%)!important;
+   border-bottom:4px ridge #a38e64!important;box-shadow:0 2px 10px #000!important;
+ }
+ body.vli-pc-ui-v21.v8-jx #v8bar #pad{
+   border:3px ridge #b6a377!important;
+   background:linear-gradient(#444637,#121c14 28%,#060b08 100%)!important;
+   box-shadow:inset 0 0 0 1px #0c130e,0 1px 12px #000c!important;
+ }
+ body.vli-pc-ui-v21.v8-jx #v8bar .v8tile,body.vli-pc-ui-v21.v8-jx #pad .pbtn{
+   border:2px ridge #7a714e!important;
+   background:radial-gradient(#253027,#080b09 75%)!important;
+   box-shadow:inset 0 1px 4px #000e!important;
+ }
+ body.vli-pc-ui-v21.v8-jx #pad .pbtn.mn,body.vli-pc-ui-v21.v8-jx #pad .pbtn.cur{
+   border-color:#e6bc61!important;box-shadow:inset 0 0 3px #000,0 0 5px #dbba6f88!important;
+ }
+ body.vli-pc-ui-v21.v8-jx #u20lines{color:#e7d69e!important;background:linear-gradient(90deg,#0b0d07d9 0%,#0b0d0780 75%,transparent 100%)!important}
+ /* Source Ui.pak: nine-slice created exclusively from the original bag frame edges. */
+ body.vli-pc-ui-v21.u20.u20win #panel,
+ body.vli-pc-ui-v21.u20 #modal .mbox{
+   background-color:#151913!important;background-image:none!important;
+   color:#e7dcb8!important;
+   border:11px solid transparent!important;border-radius:0!important;
+   border-image-source:url(ui/pc-v21/native-pc-frame-v21.webp)!important;
+   border-image-slice:18 fill!important;
+   border-image-width:11px!important;
+   border-image-repeat:stretch!important;
+   outline:1px solid #080b08!important;
+   box-shadow:0 0 0 1px #aa97656e,0 8px 23px #000e!important;
+   padding:0 0 7px!important;scrollbar-width:thin;scrollbar-color:#82714c #0c100c;
+ }
+ body.vli-pc-ui-v21.u20 #u20wh{
+   display:flex!important;align-items:center;height:30px!important;
+   color:#fae0a0!important;background:linear-gradient(#39382b,#1a2119 85%)!important;
+   text-shadow:0 1px 2px #000!important;border-bottom:1px solid #b09a5c!important;
+   font:700 13px Tahoma,Arial,sans-serif!important;letter-spacing:.4px;
+ }
+ body.vli-pc-ui-v21.u20 #u20wh::before,body.vli-pc-ui-v21.u20 #u20wh::after{
+   top:14px!important;background:linear-gradient(90deg,transparent,#a48b57,transparent)!important
+ }
+ body.vli-pc-ui-v21.u20 #u20wx,body.vli-pc-ui-v21.u20 #modal .mx{
+   box-sizing:border-box!important;position:absolute!important;right:3px!important;top:2px!important;
+   width:22px!important;height:22px!important;min-width:22px!important;min-height:22px!important;
+   color:transparent!important;font-size:0!important;text-shadow:none!important;
+   border:0!important;border-radius:0!important;box-shadow:none!important;
+   background:transparent url(ui/pc-v21/native-pc-close-0.webp) center/22px 22px no-repeat!important;
+ }
+ body.vli-pc-ui-v21.u20 #u20wx:hover,body.vli-pc-ui-v21.u20 #modal .mx:hover{
+   background-image:url(ui/pc-v21/native-pc-close-1.webp)!important
+ }
+ body.vli-pc-ui-v21.u20 #u20wx:active,body.vli-pc-ui-v21.u20 #modal .mx:active{
+   background-image:url(ui/pc-v21/native-pc-close-2.webp)!important
+ }
+ body.vli-pc-ui-v21.u20 #panel .tab{padding:6px 7px 0!important}
+ body.vli-pc-ui-v21.u20 #panel .btn:not(.pcui-native-button):not(.v21-native-button),
+ body.vli-pc-ui-v21.u20 #modal .btn:not(.pcui-native-button):not(.v21-native-button){
+   border:1px ridge #a48d59!important;border-radius:1px!important;
+   background:linear-gradient(#5d5a42 0%,#37382d 52%,#24281e 100%)!important;
+   color:#f9de9f!important;box-shadow:inset 0 1px #dbca9973,0 1px 2px #000b!important;
+   text-shadow:0 1px #000!important;
+ }
+ body.vli-pc-ui-v21.u20 #panel .btn:hover:not(:disabled),body.vli-pc-ui-v21.u20 #modal .btn:hover:not(:disabled){filter:brightness(1.2)}
+ /* Inventory: retain original H5 cells, tooltips, hotkeys, sorting, and money. */
+ body.vli-pc-ui-v21.u20.u20win[data-u2t="inv"] #panel{
+   width:264px!important;max-width:calc(100vw - 26px)!important;
+   min-height:0!important;max-height:calc(100vh - 120px)!important;
+ }
+ body.vli-pc-ui-v21.u20.u20win.u2rxon[data-u2t="inv"] #panel{
+   width:520px!important;max-width:calc(100vw - 26px)!important;
+ }
+ body.vli-pc-ui-v21.u20 #t-inv{padding:6px 7px 4px!important}
+ body.vli-pc-ui-v21.u20 .u2bagrow{gap:8px!important;justify-content:flex-start!important}
+ body.vli-pc-ui-v21.u20 .u2bagrow>.u2bag{width:230px!important;flex:0 0 230px!important}
+ body.vli-pc-ui-v21.u20 .u2bh{height:26px!important;display:flex!important;gap:5px!important;color:#e9d1a2!important}
+ body.vli-pc-ui-v21.u20 .u2bh .u2buy{flex:0 0 auto!important;min-width:48px!important;white-space:nowrap!important;height:23px!important;line-height:18px!important;font:11px Tahoma,Arial,sans-serif!important;padding:1px 4px!important}
+ body.vli-pc-ui-v21.u20 .u2bh select{min-width:0!important;flex:1 1 auto!important}
+ body.vli-pc-ui-v21.u20 #iSort{background:#101711!important;color:#d8d6b6!important;border:1px solid #776f4d!important;font-size:11px!important;max-width:130px!important}
+ body.vli-pc-ui-v21.u20 .u2bag .invgrid{
+   width:max-content!important;margin:2px auto 6px!important;
+   grid-template-columns:repeat(6,34px)!important;gap:1px!important;
+   padding:2px!important;border:2px ridge #a68c57!important;
+   background:linear-gradient(#353629,#181a13)!important;
+   box-shadow:inset 0 0 0 1px #181a12,0 2px 4px #000a!important;
+ }
+ body.vli-pc-ui-v21.u20 .u2bag .invgrid .it{
+   width:34px!important;height:34px!important;min-width:34px!important;
+   background:#0a110c url(ui/pc-v21/native-pc-slot-v21.webp) center/100% 100% no-repeat!important;
+   border:1px solid #575941!important;border-radius:0!important;box-shadow:inset 0 0 4px #000c!important;
+ }
+ body.vli-pc-ui-v21.u20 .u2bag .invgrid .it:hover{border-color:#e6c26c!important;box-shadow:0 0 5px #e5c56d77!important}
+ body.vli-pc-ui-v21.u20 .u2bag .invgrid .it.r1{border-color:#80a2d0!important}
+ body.vli-pc-ui-v21.u20 .u2bag .invgrid .it.r2{border-color:#e9bd5a!important}
+ body.vli-pc-ui-v21.u20 .u2bag .invgrid .it.r3{border-color:#b588d8!important}
+ body.vli-pc-ui-v21.u20 .u2money{gap:3px 4px!important;color:#e7c895!important}
+ body.vli-pc-ui-v21.u20 .u2money b{background:#060b07!important;border:1px solid #665937!important;color:#f8d16a!important}
+ body.vli-pc-ui-v21.u20 .u2act{gap:3px!important}
+ body.vli-pc-ui-v21.u20 .u2act .btn,body.vli-pc-ui-v21.u20 .u2act button{font:11px Tahoma,Arial,sans-serif!important;min-height:27px!important;letter-spacing:0!important}
+ body.vli-pc-ui-v21.u20 .u2buy{background:linear-gradient(#5d5034,#24291d)!important;border:1px solid #9a8255!important;color:#f3d58d!important}
+ body.vli-pc-ui-v21.u20 .u2rx{padding-left:10px!important;border-left:1px solid #9b8657!important}
+ /* Skill book + training pane: both original H5 components, harmonised in PC textures. */
+ body.vli-pc-ui-v21.v9-jx.u20.u20win[data-u2t="skill"] #panel{
+   top:clamp(55px,9vh,100px)!important;
+   width:618px!important;max-width:calc(100vw - 24px)!important;overflow:visible!important;
+   border:0!important;border-image:none!important;background:transparent!important;
+   box-shadow:none!important;outline:0!important;
+   padding:0!important;
+ }
+ body.vli-pc-ui-v21.v9-jx .v9-skill-shell{
+   display:flex!important;align-items:stretch!important;gap:7px!important;
+   width:618px!important;max-width:calc(100vw - 24px)!important;
+   font:11px/1.25 Tahoma,Arial,sans-serif!important;
+ }
+ body.vli-pc-ui-v21.v9-jx .v9-skill-book,
+ body.vli-pc-ui-v21.v9-jx .v9-skill-learn{
+   min-width:0!important;color:#d4d5b5!important;
+   background-color:#131a12!important;background-image:none!important;
+   border:10px solid transparent!important;border-radius:0!important;
+   border-image-source:url(ui/pc-v21/native-pc-frame-v21.webp)!important;
+   border-image-slice:18 fill!important;border-image-width:10px!important;
+   border-image-repeat:stretch!important;
+   box-shadow:0 0 0 1px #7f7959,0 6px 18px #000d!important;
+ }
+ body.vli-pc-ui-v21.v9-jx .v9-skill-book{
+   width:222px!important;flex:0 0 222px!important;min-height:410px!important;
+   padding:3px!important;
+ }
+ body.vli-pc-ui-v21.v9-jx .v9-skill-learn{
+   width:389px!important;max-width:none!important;flex:1 1 auto!important;
+   height:min(620px,calc(100vh - 178px))!important;
+   max-height:min(620px,calc(100vh - 178px))!important;
+   padding:5px!important;
+ }
+ body.vli-pc-ui-v21.v9-jx .v9-book-title{
+   background:linear-gradient(#514f39,#242d23)!important;color:#f5d58c!important;
+   text-shadow:0 1px #000!important;border:1px solid #9c8d61!important;
+   font-weight:700!important;font-size:12px!important;height:30px!important;
+ }
+ body.vli-pc-ui-v21.v9-jx .v9-book-tabs button{
+   border:1px solid #8e8054!important;border-radius:0!important;
+   color:#f4d89c!important;background:linear-gradient(#423b2b,#1a2218)!important;
+ }
+ body.vli-pc-ui-v21.v9-jx .v9-book-tabs button.on{background:linear-gradient(#9a8354,#42331c)!important;color:#fff0bc!important}
+ body.vli-pc-ui-v21.v9-jx .v9-skill-grid{
+   background:linear-gradient(#182017bb,#080e0bdb),url(ui/jx1/pbg.png) center/100% 100%!important;
+   border:2px ridge #9f8961!important;
+   grid-template-columns:repeat(5,minmax(0,1fr))!important;
+   height:278px!important;gap:2px!important;
+ }
+ body.vli-pc-ui-v21.v9-jx .v9-skill-tile,
+ body.vli-pc-ui-v21.v9-jx .v9-grid-empty{
+   height:42px!important;background:#080f0b url(ui/pc-v21/native-pc-slot-v21.webp) center/100% 100% no-repeat!important;
+   border:1px solid #5b5a42!important;box-shadow:inset 0 0 4px #000e!important;
+ }
+ body.vli-pc-ui-v21.v9-jx .v9-skill-tile img{width:33px!important;height:33px!important}
+ body.vli-pc-ui-v21.v9-jx .v9-skill-tile.primary{border-color:#e9c368!important}
+ body.vli-pc-ui-v21.v9-jx .v9-learn-header{
+   color:#f4d48a!important;border-bottom:1px solid #8c784e!important;
+   height:31px!important;min-height:31px!important;
+   background:linear-gradient(#33382b,#161e16)!important;padding:2px 4px!important;
+ }
+ body.vli-pc-ui-v21.v9-jx .v9-learn-header button{
+   border:1px solid #91845c!important;color:#f5d593!important;
+   background:linear-gradient(#51442e,#1c231a)!important;
+ }
+ body.vli-pc-ui-v21.v9-jx .v9-auto-rot,
+ body.vli-pc-ui-v21.v9-jx .v9-skill-card{
+   border:1px solid #645d41!important;background:linear-gradient(115deg,#202c20,#101a13)!important;
+   color:#dbdfc9!important;
+ }
+ body.vli-pc-ui-v21.v9-jx .v9-skill-card:hover,body.vli-pc-ui-v21.v9-jx .v9-skill-card.is-selected{border-color:#d7b36c!important;background:linear-gradient(#2b3828,#111e15)!important}
+ body.vli-pc-ui-v21.v9-jx .v9-skill-name{color:#f8d480!important;font-weight:700!important}
+ body.vli-pc-ui-v21.v9-jx .v9-skill-type{background:#343d30!important;color:#ddd2a2!important}
+ body.vli-pc-ui-v21.v9-jx .v9-skill-detail{border:2px ridge #8d7955!important;background:#0b100a!important}
+ body.vli-pc-ui-v21.v9-jx .v9-skill-scroll,
+ body.vli-pc-ui-v21.v9-jx .v9-learn-scroll{scrollbar-width:thin;scrollbar-color:#8d754c #101810!important}
+ body.vli-pc-ui-v21.v9-jx .v9-close-button{
+   background:linear-gradient(#9e8c5d,#49442e)!important;color:#f6e0a1!important;
+   border:2px ridge #a79366!important;text-shadow:0 1px #000!important;
+ }
+ body.vli-pc-ui-v21.v9-jx .v9-help-note{color:#c3c6a2!important}
+ body.vli-pc-ui-v21.v9-jx .v9-smallbtn,
+ body.vli-pc-ui-v21.v9-jx .v9-primary,
+ body.vli-pc-ui-v21.v9-jx .v9-slot{
+   background:linear-gradient(#3d4432,#19231b)!important;border:1px solid #9b8359!important;
+   color:#f1d398!important;
+ }
+ /* Also style other LIVE windows, not mockups. */
+ body.vli-pc-ui-v21.u20 .u2doll,
+ body.vli-pc-ui-v21.u20 .u2tree,
+ body.vli-pc-ui-v21.u20 .u2qd,
+ body.vli-pc-ui-v21.u20 .u2box{
+   border:2px ridge #83734d!important;background-color:#0f1710!important;
+   box-shadow:inset 0 0 8px #000b!important;
+ }
+ body.vli-pc-ui-v21.u20 .u2h{color:#f6d38c!important;border-left:2px solid #b99a62!important;background:linear-gradient(90deg,#45402c,transparent)!important}
+ body.vli-pc-ui-v21.u20 .u2tabs button.on,body.vli-pc-ui-v21.u20 .dtabs button.on{background:linear-gradient(#6a5936,#292a1f)!important;color:#ffdda0!important}
+ /* Original Pc Ui.pak bitmap buttons. Applied only to exact-label functional buttons. */
+ body.vli-pc-ui-v21.u20 button.v21-native-button:not(.pcui-native-button){
+   display:inline-flex!important;align-items:center!important;justify-content:center!important;
+   width:var(--v21-bw)!important;height:var(--v21-bh)!important;
+   min-width:var(--v21-bw)!important;min-height:var(--v21-bh)!important;
+   max-width:var(--v21-bw)!important;max-height:var(--v21-bh)!important;
+   padding:0!important;border:0!important;border-radius:0!important;
+   color:transparent!important;font-size:0!important;text-shadow:none!important;
+   box-shadow:none!important;background:transparent var(--v21-bnormal) center/100% 100% no-repeat!important;
+ }
+ body.vli-pc-ui-v21.u20 button.v21-native-button:not(.pcui-native-button):hover{background-image:var(--v21-bhover)!important}
+ body.vli-pc-ui-v21.u20 button.v21-native-button:not(.pcui-native-button):active{background-image:var(--v21-bactive)!important}
+ body.vli-pc-ui-v21.u20 button.v21-native-button:not(.pcui-native-button):disabled{opacity:.5!important}
+ /* Shortcut dock calls the exact original u20menu click handlers. No copied gameplay handlers. */
+ body.vli-pc-ui-v21.u20 #v21-dock{
+   display:flex;position:fixed;left:8px;bottom:86px;z-index:24;
+   align-items:center;gap:3px;padding:4px 7px;
+   background:linear-gradient(#36382a,#0b120e)!important;
+   border:3px ridge #99845d!important;box-shadow:0 2px 9px #000c!important;
+ }
+ body.vli-pc-ui-v21.u20 #v21-dock button{
+   min-width:43px;height:48px;display:flex;flex-direction:column;justify-content:center;align-items:center;
+   gap:0;padding:2px 3px;border:1px solid #665e44;border-radius:0;cursor:pointer;
+   color:#f4d69b;background:linear-gradient(#243023,#080f09);font:10px Tahoma,Arial,sans-serif;
+ }
+ body.vli-pc-ui-v21.u20 #v21-dock button img{
+   width:26px;height:26px;object-fit:contain;image-rendering:auto;
+ }
+ body.vli-pc-ui-v21.u20 #v21-dock button:hover,
+ body.vli-pc-ui-v21.u20 #v21-dock button[aria-pressed="true"]{
+   border-color:#d8b877;color:#ffeabb;background:linear-gradient(#5b543b,#1e281b)!important;
+ }
+ body.vli-pc-ui-v21.u20 #v21-dock button:focus-visible{outline:2px solid #ffdb86;outline-offset:2px}
+ body.u20 #v21-toggle{display:flex!important;cursor:pointer}
+ body.u20 #v21-toggle[aria-pressed="false"] .v8ico{filter:grayscale(.7);opacity:.65}
+ body.vli-pc-ui-v21.u20 #v21-toggle[aria-pressed="true"] .v8ico{border-color:#e4c276!important;color:#ffe7a5!important}
+ body.vli-pc-ui-v21.u20 #modal .mbox{max-height:calc(100vh - 80px)!important;overflow:auto!important}
+}
+@media (min-width:900px) and (max-width:1199px) and (min-height:560px){
+ body.vli-pc-ui-v21.v9-jx.u20.u20win[data-u2t="skill"] #panel{width:550px!important}
+ body.vli-pc-ui-v21.v9-jx .v9-skill-shell{width:550px!important}
+ body.vli-pc-ui-v21.v9-jx .v9-skill-book{width:197px!important;flex-basis:197px!important}
+ body.vli-pc-ui-v21.v9-jx .v9-skill-learn{width:346px!important}
+ body.vli-pc-ui-v21.v9-jx .v9-skill-tile,body.vli-pc-ui-v21.v9-jx .v9-grid-empty{height:36px!important}
+ body.vli-pc-ui-v21.v9-jx .v9-skill-grid{height:243px!important}
+}
+@media (min-width:900px) and (min-height:560px) and (max-height:720px){
+ body.vli-pc-ui-v21.v9-jx .v9-skill-learn{height:calc(100vh - 178px)!important;max-height:calc(100vh - 178px)!important}
+ body.vli-pc-ui-v21.u20 #v21-dock{bottom:70px!important}
+}
+@media (max-width:899px),(max-height:559px){
+ #v21-dock,#v21-toggle{display:none!important}
+}
+@media (prefers-reduced-motion:reduce){body.vli-pc-ui-v21 *{transition-duration:.01ms!important;animation-duration:.01ms!important}}

@@ -1,0 +1,76 @@
+VÕ LÂM IDLE H5 OFFLINE V23 — BÁO CÁO BÀN GIAO
+Ngày kiểm thử: 13/10/2026 (giờ Việt Nam)
+
+KẾT LUẬN
+Đây là gói game đầy đủ từ V6, đã tích hợp lớp giao diện V23 và tài nguyên PC thật.
+Chưa hoàn thành mục tiêu thay toàn bộ giao diện thành bố cục Võ Lâm PC 100%.
+Không gọi gói này là bản giống PC 100%, không coi 45 kiểm tra chức năng là chứng nhận hình ảnh.
+
+NGUỒN ĐÃ ĐỌC
+- Vo_Lam_Idle_Offline_V6_120_150_TrangBi130_TongKim.zip; ZIP nguồn không lỗi CRC.
+- V21 và V22 (gói trọn bộ kèm V21), JavaScript/CSS và bảng ánh xạ tài nguyên.
+- Ui.pak: 135 mục; đã giải mã khung đầu của 135 mục.
+- spr.pak: 14.569 mục, ghép đủ spr.z01 + spr.zip; giải mã các sprite HUD/nhân vật/võ công.
+- Đọc chỉ mục resource.pak (2.810), maps.pak (64.447), skills.pak (257), font.pak (6).
+- Lớp UI mới sử dụng ảnh từ Ui.pak và spr.pak. Các PAK còn lại chưa được tích hợp mới.
+  Font trong font.pak là ASF, chưa chuyển thành font web; đang dùng Tahoma/Arial.
+
+ĐÃ THỰC HIỆN
+- Bỏ nạp lớp bố cục V8/V9/V10 trên desktop, thay bằng shell V23.
+- Dùng HUD PC gốc 800x600; hiển thị dải phía dưới, đặt điều khiển thuốc và F1–F4 lên đó.
+- Dùng ảnh Việt hóa Túi Hành Trang 223x349 và lưới 6x10 ô; giữ hành động vật phẩm, mở rộng, kho và bộ lọc.
+- Dùng sprite nhân vật 428x430, đặt điều khiển chỉ số/trang bị hiện có lên ảnh gốc.
+- Tạo cửa sổ võ công 205x376, học chiêu bằng skLearn, xem/chọn chiêu qua skillModal gốc.
+- Menu Nhân vật/Hành trang/Võ công/Nhiệm vụ/Lò rèn/Hệ thống và phím F5/F6/F7/F8/F10.
+- Nút Tống Kim, hoạt động, phần thưởng, Kỳ Trân Các, trợ thủ, đồ 130+, AdminCP.
+- Kéo cửa sổ, Escape đóng; ô chiêu chính trên HUD mở cửa sổ võ công.
+- HUD Tống Kim và minimap theo dữ liệu bot đang chiến đấu. Khôi phục nền hiển thị V10 khi vào/rời trận.
+- 800x600 trở lên ở chế độ ngang dùng UI desktop; điện thoại dọc giữ giao diện V6.
+
+BẢO TOÀN GAMEPLAY
+Đối chiếu từng tệp với ZIP V6: chỉ index.html và js/ui20.js bị sửa.
+ui20.js chỉ đổi ngưỡng chiều rộng desktop từ 900 xuống 800.
+Các tệp combat/control/stats/skill 120/150/highgear/tongkim/save và dữ liệu gốc giữ nguyên byte.
+Lớp V23 gọi các hàm game hiện có; không sửa cấu trúc save hoặc tự nâng cấp nhân vật của người dùng.
+Nhân vật cấp 150 dùng kiểm thử thuộc hồ sơ trình duyệt tạm, không nằm trong gói bàn giao.
+
+KIỂM THỬ
+45/45 kiểm tra PASS trên Chromium headless. Không có lỗi JavaScript, lỗi console hoặc HTTP 404 trong lượt thử.
+Chặn mọi truy cập mạng ngoài localhost: không phát sinh yêu cầu ngoài; game ở NET_LOCAL=true.
+11.439 đường dẫn tài nguyên trong manifest V6 đều có tệp cục bộ.
+- Mở 6 cửa sổ, kiểm tra biên tại 1366x768; mở 8 hành động phụ.
+- Tải đủ 8 bitmap UI kiểm tra; xác nhận kích thước gốc.
+- Kéo cửa sổ, F7/Escape, nút HUD mở võ công, nút hành trang từ cửa sổ nhân vật.
+- Thiếu Lâm cấp 150: học kỹ năng 120 và 150; engine từ chối chiêu dùng sai vũ khí.
+  Tháo vũ khí bằng hàm game gốc, chọn thành công chiêu 150, kiểm tra mainLock/F1 và Auto sau recalc.
+- Tạo một trang bị yêu cầu cấp 130 thật qua AdminCP; mở chi tiết từ ô hành trang.
+- Vào phe Đại Tống từ nút PC, thấy bot và thời gian trận tiến lên; xác nhận rời trận.
+- Shell tại 800x600, 1024x768, 1920x1080; chuyển về H5 tại 390x844.
+Phạm vi giới hạn: chưa chơi hết mọi nhiệm vụ/phó bản, chưa thử tất cả 10 môn phái,
+chưa kiểm tra lâu dài cân bằng chiến đấu và chưa chứng nhận mọi cửa sổ ở mọi độ phân giải.
+Chi tiết từng kiểm tra: KIEM_THU_V23.json. Nguồn/hash ảnh và thay đổi: V23_MANIFEST.json.
+
+NHỮNG PHẦN CHƯA ĐẠT BỐ CỤC PC
+1. HUD: dải PC gốc được đặt giữa đáy màn hình; vị trí và số ô menu/hotkey vẫn là ánh xạ cho gameplay H5.
+   Cụm hoạt động góc trái, thanh HP/MP/EXP, chat và minimap chưa trùng bố cục PC Việt Nam đầy đủ.
+2. Nhân vật: dùng nền PC thật, nhưng các trường chỉ số và 11 vị trí trang bị vẫn được bố trí lại từ H5;
+   một số chỉ số phải cuộn. Chưa khớp chính xác tọa độ PC, còn chữ Trung Quốc nằm sẵn trong ảnh.
+3. Hành trang: khung 223x349 và lưới 6x10 dùng ảnh gốc. Phần tiền, mở rộng và các hành động bên dưới
+   là điều khiển H5 được sắp lại, tổng chiều cao 462px; không phải nguyên cửa sổ PC 223x349.
+4. Võ công: khung 205x376 dùng sprite PC. Lưới 5x6, số cấp và nút cộng điểm là DOM mới cho dữ liệu H5;
+   phân trang/bộ lọc/trợ thủ và chi tiết chiêu chưa sao chép đầy đủ mọi trạng thái PC.
+5. Lò rèn, nhiệm vụ, hệ thống, cửa hàng, kho, Kỳ Trân Các, AdminCP, quà và hộp thoại Tống Kim:
+   mới đổi khung/nút; nội dung bên trong còn bố cục H5. Đây là phần lớn còn thiếu của Full Replacement.
+6. Tạo/chọn nhân vật và điện thoại: còn giao diện H5. Chưa thay bằng màn hình đăng nhập/chọn nhân vật PC.
+7. Font, con trỏ và trạng thái hover/nhấn/khóa của mọi nút: chưa dùng đầy đủ font ASF và sprite tương ứng.
+8. Bản đồ/nhân vật/hiệu ứng vẫn là tài nguyên V6; chưa chuyển maps.pak/resource.pak/skills.pak vào hệ thống hiển thị mới.
+9. Tổ đội bị khóa sẵn trong V6 (PARTY_CLOSED=true); nút V23 hiển thị lý do, không có tổ đội người chơi offline.
+10. Chưa đối chiếu cấu hình tọa độ UI PC (.ini) và ảnh chuẩn của một bản PC Việt Nam xác định.
+    Chưa có phép so ảnh từng pixel; VLI_PC_UI_V23.status().verifiedPixelPerfect luôn là false.
+
+CÁCH CHẠY
+Giải nén toàn bộ ZIP rồi chạy CHAY_V23_PC.cmd (hoặc CHAY_GAME_OFFLINE.cmd).
+Cần Python 3 để mở máy chủ cục bộ. Trình duyệt vào http://127.0.0.1:8765/index.html.
+Dùng cùng trình duyệt/hồ sơ và địa chỉ này như bản trước để giữ dữ liệu lưu theo origin.
+Chỉ chạy một bản game trên cổng 8765 tại một thời điểm. Đóng cửa sổ máy chủ cũ trước khi mở bản mới.
+Không cần cài thêm bản vá V21/V22. Không có bản lưu nhân vật kiểm thử trong gói.

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="theme-color" content="#0e1412">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<title>Võ Lâm Idle Offline V23 · PC Client UI</title>
+<style>body{font-family:Consolas,"Courier New",monospace}</style>
+<link rel="stylesheet" href="style.css?v=541">
+<link rel="stylesheet" href="jx1ui.css?v=541">
+<link rel="stylesheet" href="jx1ui2.css?v=541">
+<link rel="stylesheet" href="ui20.css?v=541">
+<link rel="stylesheet" href="admincp.css?v=7">
+<link rel="stylesheet" href="tongkim-vli.css?v=1">
+<link rel="stylesheet" href="vli-highgear-130.css?v=6">
+<link rel="stylesheet" href="vli-tongkim-entry.css?v=6">
+<link rel="stylesheet" href="vli-ui-v7.css?v=72">
+<script id="vli-v7-full-reset">(function(){try{if(window.innerWidth<900||window.innerHeight<560)return;var k="jxidle_ui",v=JSON.parse(localStorage.getItem(k)||"{}");if(v&&v.compact){v.compact=false;localStorage.setItem(k,JSON.stringify(v));}}catch(e){}})();</script>
+<link rel="stylesheet" href="vli-jx-v8.css?v=80">
+<link rel="stylesheet" href="vli-jx-v9.css?v=93">
+<link rel="stylesheet" href="vli-jx-v10.css?v=1001">
+<link rel="stylesheet" href="vli-jx-v11.css?v=1101">
+<link rel="stylesheet" href="vli-jx-v12.css?v=1201">
+<link rel="stylesheet" href="vli-pc-ui-v23.css?v=2300">
+</head>
+<body>
+<div id="app">
+  <header id="top">
+    <div class="lvbox"><span id="lv">1</span></div>
+    <div class="topmid">
+      <div class="row"><b id="heroName">Võ Lâm Idle</b><span id="stageLbl"></span></div>
+    </div>
+    <button id="ktcBtn" title="Kỳ Trân Các">Kỳ Trân Các</button>
+    <div class="gold"><span class="coin"></span><span id="gold">0</span><img class="knbi" src="img/ep/knb.png" alt=""><span id="knbTop">0</span></div>
+    <button id="actBtn" title="Nhiệm vụ · Hoạt động">⚔</button>
+    <button id="tkBtn" type="button" title="Chiến trường Tống Kim - yêu cầu cấp 20">⚔ Tống Kim</button>
+    <button id="giftBtn" title="Phần thưởng">🎁</button>
+    <button id="compactBtn" title="Thu gọn / mở rộng sân đấu">⛶</button>
+  </header>
+
+  <section id="battle">
+    <div id="bg"></div>
+    <canvas id="arena"></canvas>
+    <div id="vli120Bar" hidden aria-label="Kỹ năng chủ động cấp 120"></div>
+    <div id="hud">
+      <div class="jxs"><span>Cấp</span><b id="lvS">1</b></div>
+      <div class="bar hp"><i id="hpBar"></i><span id="hpTxt"></span></div>
+      <div class="bar mp"><i id="mpBar"></i><span id="mpTxt"></span></div>
+      <div class="bar xp"><i id="xpBar"></i><span id="xpTxt"></span></div>
+      <div class="jxs" title="Lực tay phải (sát thương chiêu chính)"><span>Lực tay</span><b id="pwS">0</b></div>
+      <div id="mainSk"></div>
+    </div>
+    <div id="topCtl"><button id="rideBtn" class="chip"></button><button id="rotBtn" class="chip"></button><button id="ctrlBtn" class="chip"></button></div>
+    <button id="inBtn" class="chip"></button>
+    <div id="townBar" class="hidden"><b id="townName"></b><button class="btn sm" id="bShop">Cửa hàng</button><button class="btn sm" id="bKtcT">Kỳ Trân Các</button><button class="btn sm" id="bStashT">Kho chung</button><button class="btn sm" id="bSellTown">Bán đồ không khớp lọc</button><button class="btn sm on" id="bBack">Trở lại bãi</button></div>
+    <div id="pad">
+      <div class="hb">
+        <button class="pbtn pot hp" id="bHp" title="Thuốc sinh lực (phím 1)"><i></i><div class="cd"></div><em></em><b>1</b><s class="pk">▾</s></button>
+        <button class="pbtn pot mp" id="bMp" title="Thuốc nội lực (phím 2)"><i></i><div class="cd"></div><em></em><b>2</b><s class="pk">▾</s></button>
+        <button class="pbtn pot tp" id="bTp" title="Thổ Địa Phù (phím 3)"><i></i><div class="cd"></div><b>3</b></button>
+      </div>
+      <div class="hb"><button class="pbtn mn" id="bMain"><i></i></button></div>
+      <div class="hb">
+        <button class="pbtn sk" data-i="0" title=""><i></i><b>F1</b><s class="pk">▾</s></button>
+        <button class="pbtn sk" data-i="1" title=""><i></i><b>F2</b><s class="pk">▾</s></button>
+        <button class="pbtn sk" data-i="2" title=""><i></i><b>F3</b><s class="pk">▾</s></button>
+        <button class="pbtn sk" data-i="3" title=""><i></i><b>F4</b><s class="pk">▾</s></button>
+      </div>
+    </div>
+  </section>
+
+  <main id="panel">
+    <div class="tab" id="t-log"></div>
+    <div class="tab hidden" id="t-char"></div>
+    <div class="tab hidden" id="t-skill"></div>
+    <div class="tab hidden" id="t-inv"></div>
+    <div class="tab hidden" id="t-forge"></div>
+    <div class="tab hidden" id="t-quest"></div>
+    <div class="tab hidden" id="t-more"></div>
+  </main>
+
+  <nav id="tabs">
+    <button data-t="log" class="on">Giang hồ</button>
+    <button data-t="char">Nhân vật<em class="dot" id="dotChar"></em></button>
+    <button data-t="inv">Hành trang</button>
+    <button data-t="skill">Võ công<em class="dot" id="dotSkill"></em></button>
+    <button data-t="forge">Lò rèn<em class="dot" id="dotForge"></em></button>
+    <button data-t="quest">Nhiệm vụ<em class="dot" id="dotQuest"></em></button>
+    <button id="tabRide" class="tride tteam">Tổ đội</button>
+    <button data-t="more">Hệ thống</button>
+  </nav>
+
+  <div id="modal" class="hidden" role="dialog" aria-modal="true"><div class="mbox" tabindex="-1"><button class="mx" id="mClose">✕</button><div id="mBody"></div></div></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+</div>
+<script src="data.js?v=541"></script>
+<script src="setvi.js?v=541"></script>
+<script src="setfix.js?v=543"></script>
+<script src="bkvng.js?v=541"></script>
+<script src="world.js?v=541"></script>
+<script src="zones2.js?v=541"></script>
+<script src="sound.js?v=541"></script>
+<script src="fx.js?v=541"></script>
+<script src="jmo.js?v=541"></script>
+<script src="jmo2.js?v=541"></script>
+<script src="js/skstd.js?v=541"></script>
+<script src="js/skills-120.js?v=1"></script>
+<script src="js/skills-150.js?v=1"></script>
+<script src="js/core.js?v=541"></script>
+<script src="js/mapobs.js?v=541"></script>
+<script src="js/stats.js?v=543"></script>
+<script src="js/vocong.js?v=543"></script>
+<script src="js/skillsys.js?v=541"></script>
+<script src="js/kytran.js?v=541"></script>
+<script src="js/loot.js?v=541"></script>
+<script src="rdata.js?v=541"></script>
+<script src="js/sets.js?v=543"></script>
+<script src="js/recipes.js?v=541"></script>
+<script src="js/vli-highgear-data.js?v=6"></script>
+<script src="js/vli-highgear-130.js?v=7"></script>
+<script src="js/combat.js?v=8-fixmain"></script>
+<script src="js/field.js?v=541"></script>
+<script src="js/ride.js?v=541"></script>
+<script src="js/save.js?v=541"></script>
+<script src="js/guard.js?v=541"></script>
+<script src="js/render.js?v=541"></script>
+<script src="js/jxmis.js?v=541"></script>
+<script src="jxstate.js?v=541"></script>
+<script src="fx2.js?v=541"></script>
+<script src="fx3.js?v=541"></script>
+<script src="js/skillfx.js?v=541"></script>
+<script src="js/skillfx-jxweb150-fix.js?v=7"></script>
+<script src="js/vli-skill-visuals-v7.js?v=7"></script>
+<script src="js/look.js?v=541"></script>
+<script src="js/jxparts.js?v=541"></script>
+<script src="js/audio.js?v=541"></script>
+<script src="js/ui.js?v=8-fixmain"></script>
+<script src="js/control.js?v=8-fixmain"></script>
+<script src="js/shop.js?v=541"></script>
+<script src="js/potsel.js?v=541"></script>
+<script src="js/rewards.js?v=541"></script>
+<script src="js/title.js?v=541"></script>
+<script src="js/records.js?v=541"></script>
+<script src="js/horse.js?v=541"></script>
+<script src="js/thanma.js?v=541"></script>
+<script src="js/dungeon.js?v=541"></script>
+<script src="js/giangho.js?v=541"></script>
+<script src="js/forge.js?v=541"></script>
+<script src="js/epdo.js?v=541"></script>
+<script src="js/thuyen.js?v=541"></script>
+<script src="js/mode.js?v=541"></script>
+<script src="js/tabs2.js?v=541"></script>
+<script src="js/auto.js?v=541"></script>
+<script src="js/guide.js?v=541"></script>
+<script src="js/stash.js?v=541"></script>
+<script src="js/donkho.js?v=541"></script>
+<script src="js/name.js?v=541"></script>
+<script src="js/chatcfg.js?v=541"></script>
+<script src="js/chat.js?v=541"></script>
+<script src="js/net.js?v=541"></script>
+<script src="js/party.js?v=541"></script>
+<script src="js/ui20.js?v=541"></script>
+<script src="js/ui20win.js?v=541"></script>
+<script src="js/csel.js?v=541"></script>
+<script src="js/skills-120-active.js?v=1"></script>
+<script src="js/tongkim.js?v=1"></script>
+<script src="js/tongkim-compat.js?v=1"></script>
+<script src="js/vli-tongkim-entry.js?v=6"></script>
+<script src="js/main.js?v=542"></script>
+<script src="admincp.js?v=7"></script>
+
+
+<script src="js/vli-pc-ui-v23.js?v=2300"></script>
+
+<script src="js/vli-pc-horse-recovery-v23-2.js?v=23.2.0"></script>
+</body>
+</html>

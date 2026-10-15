@@ -1,0 +1,43 @@
+VO LAM IDLE ADMINCP V3 - CAP 200 - SKILL 120/150 + TONG KIM OFFLINE
+==============================================================
+
+CACH CHAY:
+1. Giai nen FILE FULL ra thu muc rieng (khong xoa thu muc game cu).
+2. Chay CHAY_GAME_OFFLINE.cmd; may can Python 3 (neu khong co Python,
+   game se thu mo index.html truc tiep bang trinh duyet).
+3. Khi game hien ra, giu game bat tren may, co the choi khong mang.
+
+CAP NHAT KY NANG:
+- Da them 10 ky nang cap 120 (ID 708-717, mot ky nang cho moi mon phai).
+- Da them 25 ky nang cap 150 (ID 751-775); 24/25 co hieu ung FX
+  combat duoc anh xa; ky nang con lai la ky nang ho tro.
+- Co them bieu tuong va thanh su dung cho 4 ky nang 120 CHU DONG:
+  710 Me Anh Tung (luot), 713 Ngu Tuyet An (an than trong Tong Kim),
+  715 Ma Am Phe Phach (choang), 716 Xuat U Bat Nhiem (giai trang thai).
+- Cac ky nang ho tro va noi tai duoc dua vao danh muc ky nang mon phai,
+  su dung tinh toan chi so khi engine ho tro thuoc tinh tuong ung.
+- Ban nang cap giu gioi han nhan vat cap 200 va AdminCP hien co.
+
+CHIEN TRUONG TONG KIM:
+- Nut 'Tong Kim' o thanh giao dien chinh.
+- Yeu cau nhan vat cap 20 tro len.
+- Chon phe Dai Tong / Dai Kim; choi voi NPC/bot NGOAI TUYEN.
+- Thoi gian 5 phut, diem, quan ham, hoi sinh, phan thuong exp/ngan luong.
+- Diem Chien Tich duoc luu theo nhan vat. Co cua hang doi thuong:
+  100 diem = 50.000 luong; 200 diem = EXP theo cap.
+- Khong co nguoi choi thuc, he thong server hay tai khoan online.
+
+GIU NHAN VAT CU:
+- Truoc khi chuyen ban, sao luu nhan vat bang chuc nang xuat save
+  cua game goc (.jxsave neu da su dung), hoac sao luu trinh duyet.
+- Neu choi ban cu tren http://127.0.0.1:8765 thi ban moi cung dung
+  127.0.0.1:8765, nen thuong su dung duoc cung luu tru trinh duyet.
+  Neu truy cap bang dia chi/port khac co the phai NHAP LAI ban save.
+- Khong xoa du lieu game va khong ghi de profile trinh duyet khi chua backup.
+
+LUU Y:
+- Game hoat dong offline. Nhung co che moi la ban TICH HOP THICH NGHI;
+  khong cam ket trung 100% tat ca skill va FX cua website goc JXWEB.
+- Da kiem thu logic bang Chromium headless va Node.js; chua thuc hien
+  kiem thu mot phien choi dai tren Windows, moi he phai va moi skill.
+- File patch nho da kem cong cu cap nhat, de su dung neu dang co thu muc goc.

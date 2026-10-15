@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Võ Lâm Idle V12.3 - Đối chiếu icon và thú cưỡi</title>
+<style>
+:root{font-family:Tahoma,Arial,sans-serif;color:#e5dec5;background:#101713}
+*{box-sizing:border-box}body{margin:0;padding:18px}h1{font-size:21px;color:#f9d788;margin:0 0 8px}p{line-height:1.5}small{color:#aab5ac}.help{max-width:1100px;color:#d3d2be}
+.menu{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 20px}button,select,input{color:#e9e2c7;background:#1c2c23;border:1px solid #6c7658;border-radius:5px;padding:8px;cursor:pointer}input{cursor:text}.summary{color:#b7ddcb;margin:0 0 12px;font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;max-width:1450px}
+.card{border:1px solid #665c37;background:#1b241d;border-radius:8px;padding:9px;min-height:197px}.name{color:#f3d889;font-weight:700;height:35px;font-size:13px}.line{display:flex;gap:10px;align-items:center}.original{width:77px;flex:0 0 77px;height:115px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #363c31;background:#121712}.original img{max-width:68px;max-height:88px}.original small{margin-top:3px}
+.sprite{position:relative;width:160px;height:136px;background:radial-gradient(ellipse at 50% 85%,#303b31,#161e19);overflow:hidden;border:1px solid #425044}.sprite canvas{width:160px;height:136px;image-rendering:pixelated}.note{margin-top:5px;font-size:11px;color:#abbcae}.special{color:#7ee2be}.warn{color:#ffbc73}
+</style>
+</head>
+<body>
+<h1>Võ Lâm Idle V12.3 – 54 icon so với hoạt ảnh cưỡi thực tế</h1>
+<p class="help">Cột trái là icon vật phẩm. Cột phải được ghép từ ba lớp hoạt ảnh khi cưỡi thực sự (ngựa phía trước, giữa, phía sau). Đổi chế độ để xem đứng, chạy, công kích hoặc thi triển. Những giống thiếu tài nguyên riêng được dùng hình gần nhất; màu phục dựng không phải sprite nguyên bản.</p>
+<div class="menu">
+<input id="q" type="search" placeholder="Tìm tên ngựa..." aria-label="Tìm ngựa">
+<select id="act"><option value="骑马站立">Đứng</option><option value="骑马跑步">Chạy</option><option value="骑马攻击劈">Đánh</option><option value="骑马魔法">Thi triển</option><option value="骑马受伤">Trúng đòn</option></select>
+<select id="dir"><option value="3">Góc nhìn chéo</option><option value="0">Hướng 1</option><option value="2">Hướng 3</option><option value="5">Hướng 6</option></select>
+<button id="pause">Tạm dừng hoạt ảnh</button><button id="refresh">Làm mới</button>
+</div>
+<div class="summary" id="summary">Đang đọc dữ liệu...</div>
+<div id="cards" class="grid"></div>
+<script src="data.js"></script>
+<script src="jxlook.js"></script>
+<script src="js/vli-mount-sync-v123.js"></script>
+<script>
+(function(){
+ 'use strict';
+ const $=id=>document.getElementById(id),j=window.JXLOOK;
+ const kinds=[['马后','ht'],['马中','hb'],['马前','hh']];
+ const names=new Map();
+ for(const h of JX.items[10].list){
+  const name=h.n.replace(/\s+\d+$/,'');
+  if(!names.has(name))names.set(name,h);
+ }
+ let entries=[...names.entries()].map(([name,horse])=>({name,horse,row:window.VLI_MOUNT_ROW_FOR(horse)}));
+ let stopped=false,frame=0;const images=new Map();
+ function image(path){if(!images.has(path)){const im=new Image;im.src=path;images.set(path,im)}return images.get(path)}
+ function init(){
+  $('summary').textContent=`${entries.length} tên ngựa và thú cưỡi · Chỉ có 25 dòng cưỡi gốc/23 bộ hình thân riêng. Các màu phục dựng KHÔNG PHẢI dữ liệu gốc từ website.`;
+  render();setInterval(()=>{if(!stopped){frame++;draw()}},115)
+ }
+ function render(){
+  const q=$('q').value.trim().toLowerCase();const view=entries.filter(e=>e.name.toLowerCase().includes(q));
+  $('cards').replaceChildren(...view.map(({name,horse,row})=>{
+   const c=document.createElement('div');c.className='card';c.dataset.k=horse.k;c.dataset.name=name;c.dataset.row=row;
+   const title=document.createElement('div');title.className='name';title.textContent=name;
+   const line=document.createElement('div');line.className='line';
+   const icon=document.createElement('div');icon.className='original';const pic=document.createElement('img');pic.src=horse.ic;pic.alt='Icon '+name;const cap=document.createElement('small');cap.textContent='Icon';icon.append(pic,cap);
+   const visual=document.createElement('div');visual.className='sprite';const canvas=document.createElement('canvas');canvas.width=320;canvas.height=272;visual.append(canvas);line.append(icon,visual);
+   const note=document.createElement('div');note.className='note'+([26,27,28].includes(horse.k)?' special':row<0?' warn':'');note.textContent=`Dòng cưỡi ${row}${[26,27,28].includes(horse.k)?' · Biến thể màu tái dựng':horse.k>=19?' · Dùng dáng sprite gần nhất':''}`;
+   c.append(title,line,note);return c;
+  }));draw()
+ }
+ function draw(){
+  const action=$('act').value,direction=+$('dir').value;
+  for(const c of $('cards').children){
+   const cv=c.querySelector('canvas'),g=cv.getContext('2d');g.clearRect(0,0,cv.width,cv.height);g.imageSmoothingEnabled=false;
+   const row=c.dataset.row;
+   for(const [part] of kinds){
+    const tab=j.tabs.m[part]?.[row];if(!tab)continue;
+    const src=tab[action]||tab['骑马站立'];if(!src)continue;
+    const key=src.startsWith('m:')?src.slice(2):src;
+    const dims=j.sheets['m/'+key];if(!dims)continue;
+    const im=image('img/jx/m/'+key+'.webp');if(!im.complete||!im.naturalWidth)continue;
+    const [w,h,ax,ay,n,dirs]=dims;
+    const px=frame%n,dy=direction%dirs;
+    const destx=(160+(ax-96)*2),desty=(238+(ay-121.2)*2);
+    g.drawImage(im,px*w,dy*h,w,h,destx,desty,w*2,h*2);
+   }
+  }
+ }
+ $('q').addEventListener('input',render);$('act').addEventListener('change',draw);$('dir').addEventListener('change',draw);
+ $('pause').onclick=()=>{stopped=!stopped;$('pause').textContent=stopped?'Tiếp tục':'Tạm dừng hoạt ảnh'};
+ $('refresh').onclick=()=>location.reload();
+ if(window.VLI_MOUNT_SYNC_READY)init();else{const t=setInterval(()=>{if(window.VLI_MOUNT_SYNC_READY){clearInterval(t);init()}},100)}
+})();
+</script>
+<p class="help"><b>Lưu ý:</b> Tên ngựa khác nhau không đồng nghĩa có sprite riêng. Các dòng 27/28/29 là biến thể màu do bản vá cũ phục dựng. Trang web tham chiếu không công bố 54 bộ hoạt ảnh riêng trong JXLOOK.</p></body>
+</html>

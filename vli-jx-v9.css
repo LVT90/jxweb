@@ -1,0 +1,121 @@
+/* VLI V9: portrait-accurate JX skin refinements to V8; original images + event handlers. */
+body.v9-jx.v8-jx.u20 {--v9bronze:#a49368;--v9gold:#f4d58a;--v9green:#1d392d;--v9line:#547b66;--v9ink:#060c09;font-family:Tahoma,Arial,sans-serif!important}
+/* top left: compact classic controls with true sprite-type buttons */
+body.v9-jx #v8left{top:23px!important;left:3px!important;width:265px!important;font-size:11px!important}
+body.v9-jx #v8left .v8name{font-size:12px!important;color:#f5e8bd!important}
+body.v9-jx #v8left .v8main{font-size:10px;margin-top:2px}
+body.v9-jx #v8left .v8actions{gap:2px;margin-top:5px}
+body.v9-jx #v8left .v8action{width:42px!important;height:43px!important;gap:1px!important;font-size:8.5px!important;letter-spacing:-.3px}
+body.v9-jx #v8left .v8action .v8ico{width:23px;height:23px;border:0;border-radius:0;background:radial-gradient(circle,#4d8b5f,#112b1b 60%,#020c08 78%);box-shadow:0 0 0 1px #796a42,inset 0 0 2px #acd680;font-size:13px}
+body.v9-jx #v8left .v8action.on .v8ico{box-shadow:0 0 0 1px #e4c879,0 0 9px #e8ce86}
+body.v9-jx #v8left .v8note{margin-top:2px;padding:2px 3px;border:1px solid #8e7d40;font-size:9px}
+#v9brand{display:none}
+/* icon dock tighter, closer to the example on the right */
+body.v9-jx #v8right{right:0!important;top:200px!important;width:41px!important;gap:3px!important}
+body.v9-jx #v8right .v8side{width:40px!important;height:36px!important;font:8.5px/1.04 Tahoma,Arial,sans-serif!important;gap:1px!important}
+body.v9-jx #v8right .v8side i{height:20px;width:20px;border:1px solid #697f4b;border-radius:3px;font-size:13px;background:radial-gradient(circle,#395a30,#0e1811 70%);box-shadow:inset 0 0 2px #7eae65}
+body.v9-jx #v8mapframe{right:8px!important;top:55px!important;width:142px!important;height:132px!important;border:2px solid #978765!important}
+body.v9-jx #v8maptitle{right:8px!important;top:22px!important;width:146px!important;height:30px!important;background:url(ui/jx1/ornt2.png) center top/194px 28px no-repeat,linear-gradient(#303b32,#111813)!important;border-color:#877c57;font:700 11px Tahoma}
+body.v9-jx #u20zone{right:8px!important;top:188px!important;width:146px!important}
+body.v9-jx #u20zb{height:19px!important;min-height:19px!important;font-size:9px!important}
+body.v9-jx #skBuffs{left:300px!important;top:101px!important}
+body.v9-jx #u20log{top:126px!important;width:308px!important}
+body.v9-jx #u20lines{background:linear-gradient(90deg,#0c0f08aa,#0c0f0822 75%,transparent)!important;font-size:10.5px!important}
+/* ornamented skill/action bar: canvas remains full viewport */
+body.v9-jx #v8bar{bottom:0!important;height:60px!important;width:min(850px,94vw)!important;padding:7px 10px 2px!important;background:linear-gradient(0deg,#030808 0%,#050d0a 45%,#020805ee 76%,transparent 100%)!important;border-bottom:2px solid #517269!important}
+body.v9-jx #v8bar::before{height:30px;background-image:url(ui/jx1/ornt2.png);opacity:.95}
+body.v9-jx #v8bar::after{top:-12px;background-image:url(ui/jx1/ornb2.png)}
+body.v9-jx #v8bar .v8wing{height:49px;gap:1px;padding:7px 1px 1px!important;flex:1 1 0}
+body.v9-jx #v8bar .v8wing .v8tile{flex:1 1 31px;height:34px;max-width:35px;min-width:24px!important;border:1px solid #314b44!important;background:radial-gradient(ellipse,#061312 30%,#000403)!important}
+body.v9-jx #v8bar .v8wing .v8tileico{width:24px;height:23px;opacity:.82}
+body.v9-jx #v8bar .v8wing .v8mini{font-size:7px;letter-spacing:-.5px;transform:scale(.92);color:#d1ad64}
+body.v9-jx #v8bar #pad{height:52px!important;background:linear-gradient(#202f27,#020805 50%,#010302)!important;border:2px ridge #879688!important;padding:8px 6px 2px!important}
+body.v9-jx #pad .pbtn{border:1px solid #4d665e!important;background:#030909!important}
+body.v9-jx #pad .pbtn.mn{background:radial-gradient(circle,#162b25,#030a09)!important;border:2px ridge #aeb6ae!important;box-shadow:0 0 0 2px #203e39,0 0 8px #050b0b!important}
+body.v9-jx #topCtl{bottom:64px!important;left:50%!important}
+/* general panels - higher readability without changing inventory/equipment events */
+body.v9-jx #panel{background:#0b1510f2!important;border:1px solid #887b56!important;box-shadow:0 0 0 1px #000,0 8px 20px #000d!important}
+body.v9-jx #panel .tab{color:#e7dfc0}
+body.v9-jx #u20wh{background:linear-gradient(#5a644e,#29362a 45%,#171c15)!important;border-bottom:1px solid #af9864!important}
+body.v9-jx .u2bag .invgrid{background:#171e19!important;border:2px ridge #968262!important}
+body.v9-jx .u2bag .it{border:1px solid #4f594c!important;background:radial-gradient(#232b21,#090d0b)!important}
+body.v9-jx .u2s{border-color:#776b4b!important}
+body.v9-jx .u2doll{background:radial-gradient(#354035,#111912,#070c0a)!important}
+body.v9-jx #modal .mbox{border-color:#988865!important;background:linear-gradient(#394537,#121c14 25%,#0a110e)!important}
+body.v9-jx .u2shop{grid-template-columns:138px 1fr;gap:9px}
+body.v9-jx .u2cat{background:#101e16;border:1px solid #857658!important}
+body.v9-jx .u2cat button.on{background:linear-gradient(#455d3d,#233a2a)!important;color:#f5d98d!important}
+body.v9-jx .u2card{background:#0b1912!important;border:1px solid #6a795e!important}
+body.v9-jx .u2ct{background:linear-gradient(#364b37,#162b1e)!important;color:#f2d69a!important}
+/* JX split skill dialogue, replacing V6 column-per-skill-level view only on desktop */
+body.v9-jx.u20.u20win[data-u2t="skill"] #panel{display:block!important;left:calc(50% - 158px)!important;top:clamp(100px,20.7vh,191px)!important;right:auto!important;transform:none!important;width:532px!important;max-width:calc(100vw - 20px)!important;max-height:calc(100vh - 200px)!important;overflow:visible!important;padding:0!important;margin:0!important;border:0!important;background:transparent!important;box-shadow:none!important;z-index:72!important}
+body.v9-jx.u20[data-u2t="skill"] #panel #u20wh{display:none!important}
+body.v9-jx.u20[data-u2t="skill"] #t-skill{padding:0!important;margin:0!important;max-height:none!important;overflow:visible!important;border:0!important;background:none!important}
+body.v9-jx .v9-skill-shell{display:flex!important;align-items:flex-start;gap:7px;width:532px;font:11px/1.25 Tahoma,Arial,sans-serif!important;color:#d7dbc8;text-shadow:0 1px #000;box-sizing:border-box}
+body.v9-jx .v9-skill-shell *{box-sizing:border-box}
+body.v9-jx .v9-skill-shell button{font-family:Tahoma,Arial,sans-serif;cursor:pointer;line-height:1.1}
+body.v9-jx .v9-skill-book{width:190px;flex:none;display:flex;flex-direction:column;align-items:stretch;background:linear-gradient(120deg,#232820,#0b100d 35%,#171b16);border:2px ridge #8f8669;box-shadow:0 0 0 1px #080b09,0 3px 9px #000b;padding:3px;min-height:338px}
+body.v9-jx .v9-book-title{position:relative;display:flex;align-items:center;justify-content:center;height:28px;background:linear-gradient(#bdbaa2,#9b9a82 38%,#777965);border:1px solid #4e5345;box-shadow:inset 0 1px #e4e1b9;color:#1c1a10;text-shadow:1px 1px #dbcf93,-1px -1px #5a5035;font-size:11px;letter-spacing:0;font-weight:900;white-space:nowrap}
+body.v9-jx .v9-title-seal{position:absolute;left:5px;top:4px;color:#5d5947;font-size:15px}
+body.v9-jx .v9-book-tabs{display:flex;gap:1px;margin-top:3px;height:19px}
+body.v9-jx .v9-book-tabs button{padding:2px 1px;flex:1;font-size:9px;color:#f5d487;background:linear-gradient(#252b20,#0a110d);border:1px solid #746843;text-align:center}
+body.v9-jx .v9-book-tabs button.on{background:linear-gradient(#58492d,#1a1c15);color:#ffe39c}
+body.v9-jx .v9-skill-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;align-content:start;height:240px;padding:2px 1px 1px;border:1px solid #5b624f;background:linear-gradient(#222d23a8,#080c08a8),url(ui/jx1/pbg.png) center/100% 100%}
+body.v9-jx .v9-skill-tile,body.v9-jx .v9-grid-empty{position:relative;display:grid;place-items:center;min-width:0;width:100%;height:38px;border:1px solid #4a5446;background:radial-gradient(#202923,#080e0a);overflow:hidden;border-radius:0;padding:0!important}
+body.v9-jx .v9-grid-empty{display:block;opacity:.56;box-shadow:inset 0 1px 5px #000b}
+body.v9-jx .v9-skill-tile img{width:31px;height:31px;object-fit:contain;image-rendering:auto}
+body.v9-jx .v9-skill-tile.unlearned img{filter:grayscale(1) brightness(.55)}
+body.v9-jx .v9-skill-tile.primary{border-color:#e5bb51!important;box-shadow:inset 0 0 4px #f1c969cc}
+body.v9-jx .v9-skill-tile.selected{outline:1px solid #d7c47c;outline-offset:-2px;background:#283825}
+body.v9-jx .v9-skill-tile:hover{border-color:#dfc67d}
+body.v9-jx .v9-tile-lv{position:absolute;bottom:0;left:0;min-width:16px;background:#041008c9;color:#a8e890;font:bold 10px/11px Tahoma;text-align:center}
+body.v9-jx .v9-tile-plus{position:absolute;top:0;left:0;background:#a51916;color:#fff;font:bold 10px Tahoma}
+body.v9-jx .v9-book-foot{height:20px;display:flex;justify-content:space-between;align-items:center;font-size:9px;color:#d3d5b6;background:#0c130e;border:1px solid #6c725e;margin-top:2px}
+body.v9-jx .v9-page-switch{display:flex;gap:1px}
+body.v9-jx .v9-page-switch button{background:#20291e;border:1px solid #545e4c;color:#c7c9a9;font-size:9px;padding:2px 2px}
+body.v9-jx .v9-page-switch button:disabled{opacity:.45;cursor:default}
+body.v9-jx .v9-book-foot b{color:#ffe17e}
+body.v9-jx .v9-close-button{font-weight:900!important;color:#1e190e!important;text-shadow:1px 1px #d4c593;background:linear-gradient(#c3bd9d,#74755b)!important;border:2px ridge #7f7d5d!important;box-shadow:inset 0 1px #c7caad;height:29px;margin-top:3px}
+body.v9-jx .v9-helper-link{border:0!important;text-align:left;color:#c3cbbb;background:linear-gradient(#192d22,#0b150f)!important;margin-top:4px;font-size:10px;padding:5px 1px}
+body.v9-jx .v9-helper-link:hover{color:#ffe4a5}
+body.v9-jx .v9-skill-learn{display:flex;flex-direction:column;flex:1;min-width:0;max-height:min(600px,calc(100vh - 220px));height:min(600px,calc(100vh - 220px));background:linear-gradient(105deg,#173526,#07120d 35%,#10251b);border:2px ridge #557f68;box-shadow:inset 0 0 0 1px #14251b,0 0 0 1px #060d09,0 5px 20px #000c;color:#b9dcc7;padding:5px 6px 6px;position:relative}
+body.v9-jx .v9-learn-header{display:flex;align-items:center;gap:5px;height:25px;min-height:25px;border-bottom:1px solid #325845;margin-bottom:4px;color:#e8cf8a;font-size:11px}
+body.v9-jx .v9-head-icon{color:#dfce85;font-size:16px}
+body.v9-jx .v9-learn-header strong{font-size:12px;white-space:nowrap}
+body.v9-jx .v9-learn-header span:not(.v9-head-icon){font-size:10px;color:#a7d2b4;white-space:nowrap}
+body.v9-jx .v9-learn-header span b{color:#e8d28b}
+body.v9-jx .v9-learn-header button{margin-left:auto;border:1px solid #56735d;background:linear-gradient(#283d30,#101b17);color:#f3edca;padding:3px 7px;font-size:10px}
+body.v9-jx .v9-learn-header .v9-small-close{margin-left:1px;padding:3px 4px}
+body.v9-jx .v9-learn-scroll{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding-right:2px;scrollbar-width:thin;scrollbar-color:#42694f #07160e}
+body.v9-jx .v9-auto-rot{display:flex;gap:6px;align-items:flex-start;padding:7px 6px 5px;background:#0b1710d9;border:1px solid #38624b;line-height:1.35;font-size:11px;min-height:56px;color:#d8e5d5}
+body.v9-jx .v9-auto-rot input{appearance:auto;accent-color:#82c9ad;flex:none;margin:1px 0 0;width:12px;height:12px}
+body.v9-jx .v9-help-note{margin:5px 0 7px;font-size:11px;line-height:1.4;color:#a6ceb2}
+body.v9-jx .v9-skill-cards{display:flex;flex-direction:column;gap:5px}
+body.v9-jx .v9-skill-card{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr);column-gap:7px;row-gap:0;background:linear-gradient(95deg,#123124,#0d2118);border:1px solid #35694c;padding:7px 5px 5px;min-height:96px}
+body.v9-jx .v9-skill-card:hover,body.v9-jx .v9-skill-card.is-selected{border-color:#71a183;background:linear-gradient(95deg,#173c2b,#0c2419)}
+body.v9-jx .v9-skill-card.is-primary{box-shadow:inset 0 0 0 1px #8e8249}
+body.v9-jx .v9-skill-detail{width:37px;height:37px;padding:1px;border:1px solid #456a5e;background:#0b1715;align-self:start;grid-column:1}
+body.v9-jx .v9-skill-detail img{width:33px;height:33px;object-fit:contain}
+body.v9-jx .v9-card-info{min-width:0;grid-column:2}
+body.v9-jx .v9-skill-name{color:#f2d58f;font-weight:700;font-size:11px;min-height:14px;line-height:1.25}
+body.v9-jx .v9-star{color:#ffcc39}
+body.v9-jx .v9-skill-type{display:inline-block;font-size:9px;color:#b4dbd0;background:#295a46;padding:1px 3px;margin-top:2px}
+body.v9-jx .v9-skill-card .v9-skill-meta{font-size:10px;color:#adccbc;margin:2px 0}
+body.v9-jx .v9-skill-meta b{color:#da876f}
+body.v9-jx .v9-skill-card .v9-skill-desc{font-size:10px;color:#c1bf8a;margin:1px 0 0;line-height:1.35}
+body.v9-jx .v9-skill-controls{grid-column:1 / -1;display:flex;align-items:center;gap:6px;height:21px;margin-top:2px}
+body.v9-jx .v9-lvl{color:#e8ce65;font-weight:bold;font-size:14px}
+body.v9-jx .v9-skill-progress{color:#adcdbb;font-size:10px;flex:1}
+body.v9-jx .v9-smallbtn{font-weight:bold!important;width:17px;height:17px;flex:none;border:1px solid #62745c;background:linear-gradient(#273c2f,#121b16);color:#e9d6a7;padding:0;line-height:14px!important;text-align:center}
+body.v9-jx .v9-smallbtn:disabled{opacity:.3;cursor:default}
+body.v9-jx .v9-smallbtn:hover:not(:disabled){border-color:#e8d181;background:#46543a}
+body.v9-jx .v9-smallbtn.v9-help{border-radius:50%;background:radial-gradient(#40695c,#142b24);color:#9ee9d6}
+body.v9-jx .v9-slotline{grid-column:1 / -1;display:flex;gap:3px;align-items:center;min-height:18px;padding-top:1px;color:#d6dbb6;font-size:10px}
+body.v9-jx .v9-slot{border:1px solid #517565;background:#14251f;color:#c1d8c4;padding:2px 5px;font-size:10px}
+body.v9-jx .v9-slot.on{background:#516c69;color:#fff;border-color:#a5cbbb}
+body.v9-jx .v9-primary{margin-left:auto;background:#17241c;border:1px solid #6d6c42;color:#e5ce83;font-size:10px;padding:2px 4px}
+body.v9-jx .v9-current{margin-left:auto;color:#e4d48d;font-size:10px}
+body.v9-jx .v9-empty-skill{font-size:11px;padding:8px;color:#b7d3be}
+@media (max-height:740px){body.v9-jx.u20.u20win[data-u2t="skill"] #panel{top:80px!important;max-height:calc(100vh - 115px)!important}body.v9-jx .v9-skill-learn{height:calc(100vh - 155px);max-height:calc(100vh - 155px)}body.v9-jx .v9-skill-grid{height:214px}body.v9-jx .v9-skill-tile,body.v9-jx .v9-grid-empty{height:34px}}
+@media (max-width:1120px){body.v9-jx.u20.u20win[data-u2t="skill"] #panel{left:calc(50% - 250px)!important}body.v9-jx #v8left{width:238px!important}}
+/* V6/V8 mobile mode is intentionally untouched. */

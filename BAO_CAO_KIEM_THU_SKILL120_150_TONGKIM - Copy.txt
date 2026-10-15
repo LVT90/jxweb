@@ -1,0 +1,22 @@
+BAO CAO KY THUAT - VO LAM IDLE SKILL 120/150 + TONG KIM
+==============================================
+Nguon game: ZIP do nguoi dung tai len, AdminCP V3 cap 200.
+Nguon bo sung: Du lieu ky nang / hieu ung JXWEB da trich xuat.
+Tong danh muc skill: 271 = 236 cu + 10 cap 120 + 25 cap 150.
+Skill cap 120: 10 (ID 708-717, 10 mon phai).
+Skill cap 150: 25 (ID 751-775), 24 co mapping sprite FX, 1 ky nang ho tro.
+Tong Kim: 5 phut, hai phe, bot NPC, hang quan, tinh diem, thuong, doi diem.
+Dieu huong tick/draw: dung TK tick/draw khi vao chien truong,
+                        tu dong tra ve field tick/draw sau khi ket thuc.
+Da test tren Chromium headless (nap toan bo JS vao trang):
+- Boot 271 skill, khong loi console khong bat duoc.
+- Hoc ky nang 120 va 150, kiem tra cap gioi han.
+- Main skill 751 co sat thuong va cau hinh sprite.
+- 4 active skill 120: luot, an than, choang, giai trang thai,
+  tieu hao noi luc, cooldown, thanh nut su dung.
+- Tong Kim: vao phe Tong, 24 don vi, tick/draw, tieu diet bot,
+  tang diem, ket thuc, thuong, luu va doi diem.
+- Luu va migrate: du lieu skill 120, 150 va diem Chien Tich.
+- Node.js --check: tat ca script moi/da sua.
+Gioi han kiem thu: chua test day du Windows + dung luong tai xuong,
+                   khong bao dam phien choi dai khong phat sinh loi.

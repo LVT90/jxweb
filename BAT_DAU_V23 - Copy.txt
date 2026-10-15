@@ -1,0 +1,4 @@
+V23: chạy CHAY_V23_PC.cmd. Đây là gói đầy đủ, không cần cài V21/V22.
+Giao diện chưa đạt PC 100%; xem BAO_CAO_V23.txt trước khi đánh giá.
+Phím F5 nhân vật, F6 hành trang, F7 võ công, F8 nhiệm vụ, F10 hệ thống; Escape đóng.
+Giữ cùng trình duyệt và URL localhost của bản cũ để tiếp tục dữ liệu đã lưu.

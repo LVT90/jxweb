@@ -1,0 +1,167 @@
+/* Native bitmap dimensions from Ui.pak/spr.pak. Live V6 elements remain actionable. */
+#pc23-shell{display:none}
+body.pc23{--pc-frame:url(ui/pc-v23/pc-frame-nine-slice.webp);font-family:Tahoma,Arial,sans-serif!important;font-size:12px!important;color:#e3d7ae!important}
+body.pc23 #app,body.pc23 #battle{position:fixed!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;margin:0!important;border:0!important;border-radius:0!important;overflow:hidden!important}
+body.pc23 #battle{padding:0!important;background:#101612!important}
+body.pc23 #arena{position:absolute!important;inset:0!important;width:100%!important;height:100%!important}
+body.pc23 :is(#top,#tabs,#u20menu,#u20r,#u20rc,#u20gold,#u20rank,#topCtl,#mainSk,#u20side,#modeSw){display:none!important}
+body.pc23 #pc23-shell{display:block;position:fixed;inset:0;pointer-events:none;z-index:35}
+body.pc23 #pc23-shell button,body.pc23 #pc23-controls,body.pc23 #pc23-menu,body.pc23 #pc23-activities,body.pc23 #pad{pointer-events:auto}
+body.pc23 button{font-family:Tahoma,Arial,sans-serif!important;cursor:pointer}
+body.pc23 :is(#pc23-shell,#panel,#modal,#csel) button:not(.it):not(.pbtn):not(.pc23-plus){border-radius:0!important;border:1px solid #6a6653!important;background:#252922 url(ui/pc-v23/button-texture.webp) center/49px 22px repeat!important;color:#efdfb4!important;text-shadow:0 1px #000;font-size:12px!important;padding:3px 6px}
+body.pc23 :is(#vli-tk-fab,#vli-gear-fab,#vliacp-open,#vliacp-u20){display:none!important}
+body.pc23 button:hover{filter:brightness(1.18)}
+body.pc23 button:disabled{opacity:.45;cursor:default}
+body.pc23 button:focus-visible{outline:2px solid #ffe7a0!important;outline-offset:1px}
+body.pc23 #pc23-name{position:absolute;left:12px;top:8px;color:#f3dfb5;text-shadow:0 1px 2px #000;font-weight:bold}
+body.pc23 #hud{position:fixed!important;left:10px!important;top:27px!important;right:auto!important;width:230px!important;height:62px!important;min-width:0!important;max-width:none!important;padding:0!important;transform:none!important;display:grid!important;grid-template-columns:107px 107px!important;gap:2px 6px!important;background:none!important;box-shadow:none!important;border:0!important;z-index:36!important}
+body.pc23 #hud .jxs{display:none!important}
+body.pc23 #hud .bar{position:relative!important;height:30px!important;width:107px!important;border:0!important;border-radius:0!important;background:transparent!important;overflow:visible!important;margin:0!important}
+body.pc23 #hud .bar.hp{background:url(ui/pc-v23/health.webp) 0 0/107px 30px no-repeat!important}
+body.pc23 #hud .bar.mp{background:url(ui/pc-v23/mana.webp) 0 0/107px 30px no-repeat!important}
+body.pc23 #hud .bar.hp i,body.pc23 #hud .bar.mp i{position:absolute!important;left:27px!important;top:20px!important;height:5px!important;max-width:76px!important;transform:scaleX(.71);transform-origin:left;background:#a41816!important}
+body.pc23 #hud .bar.mp i{background:#245b9e!important}
+body.pc23 #hud .bar span{position:absolute;left:27px;top:1px;font-size:10px!important;line-height:14px!important;white-space:nowrap;color:#f2e8d0;text-shadow:0 1px #000}
+body.pc23 #hud .bar.xp{height:8px!important;width:220px!important;grid-column:1/3;background:#171b13!important;border:1px solid #6e6a4d!important;overflow:hidden!important}
+body.pc23 #hud .bar.xp i{height:100%!important;background:#9d8b4c!important}
+body.pc23 #hud .bar.xp span{display:none!important}
+body.pc23 #pc23-controls{position:absolute;left:12px;top:80px;display:flex;gap:4px}
+body.pc23 #pc23-activities{position:absolute;left:12px;top:109px;display:flex;gap:3px;flex-wrap:wrap;max-width:280px}
+body.pc23 #pc23-miniframe{position:absolute;right:8px;top:8px;width:136px;height:136px;border:4px solid transparent;border-image:var(--pc-frame) 24/4px stretch}
+body.pc23 #pc23-maplabel{position:absolute;right:8px;top:149px;width:136px;pointer-events:auto;text-align:center}
+body.pc23 #pc23-maplabel #u20zb{display:block!important;width:100%;font-size:11px!important;min-height:24px}
+body.pc23 #u20zone{position:fixed!important;top:177px!important;right:8px!important;left:auto!important;width:340px!important;z-index:60!important}
+body.pc23 #u20zone:has(#u20zl.hidden){pointer-events:none}
+body.pc23 #u20zl{max-height:calc(100vh - 270px)!important;overflow:auto!important}
+body.pc23 #pc23-hud{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:800px;height:84px;background:url(ui/pc-v23/hud.webp) center bottom/800px 600px no-repeat}
+body.pc23 #pc23-hud #pad{position:absolute!important;inset:0!important;width:800px!important;height:84px!important;padding:0!important;margin:0!important;transform:none!important;background:transparent!important;border:0!important;box-shadow:none!important;display:block!important;z-index:1!important}
+body.pc23 #pad .hb{position:absolute!important;display:flex!important;gap:1px!important;margin:0!important;padding:0!important;background:transparent!important;border:0!important;bottom:15px!important}
+body.pc23 #pad .hb:nth-child(1){left:16px!important}
+body.pc23 #pad .hb:nth-child(2){left:186px!important;bottom:10px!important}
+body.pc23 #pad .hb:nth-child(3){left:516px!important;bottom:10px!important}
+body.pc23 #pad .pbtn{height:33px!important;width:34px!important;min-width:0!important;min-height:0!important;background:#07100d!important;border:1px solid #4a7167!important;border-radius:0!important;margin:0!important;padding:0!important;box-shadow:none!important}
+body.pc23 #pad .pbtn.mn,body.pc23 #pad .pbtn.sk{height:22px!important;width:22px!important}
+body.pc23 #pad .pbtn i{inset:1px!important;background-size:contain!important}
+body.pc23 #pad .pbtn b{font-size:8px!important;bottom:0!important;top:auto!important;right:0!important;color:#ead89a!important}
+body.pc23 #pad .pbtn em{font-size:8px!important}
+body.pc23 #pad .pbtn .pk{font-size:8px!important;right:0!important;top:0!important}
+body.pc23 #pc23-menu{position:absolute;bottom:69px;right:8px;display:flex;gap:2px}
+body.pc23 #pc23-menu button{min-width:46px;height:32px;font-size:11px!important;display:flex;flex-direction:column;justify-content:center;align-items:center}
+body.pc23 #pc23-menu small{font-size:8px;color:#aaa48c}
+body.pc23 #pc23-menu button[aria-pressed=true]{outline:1px solid #f1d387}
+body.pc23 #pc23-money{position:absolute;bottom:39px;left:50%;transform:translateX(-50%);font-size:10px;color:#dfd2a4;white-space:nowrap}
+body.pc23 #vli120Bar{position:fixed!important;left:50%!important;bottom:78px!important;top:auto!important;transform:translateX(-50%)!important;z-index:37!important}
+body.pc23 #u20log{position:fixed!important;left:8px!important;bottom:75px!important;top:auto!important;width:300px!important;z-index:34!important;color:#d2cca4!important;background:none!important;font-size:11px!important}
+body.pc23 #u20lines{height:100px!important;max-height:100px!important;background:#08100888!important;line-height:17px!important;border:0!important;font-size:11px!important}
+body.pc23 #u20ct{background:#121912c7!important;height:21px!important}
+body.pc23 #u20ct button,body.pc23 #u20in button{font-size:10px!important;background:#20271d!important;border:1px solid #595b42!important;color:#d6cda3!important;border-radius:0!important}
+body.pc23 #u20in{display:flex!important;position:static!important;height:23px!important;background:#111b12!important;border:1px solid #767052!important}
+body.pc23 #u20txt{color:#e4ddbb!important;background:transparent!important;font-size:11px!important;min-width:0}
+body.pc23.u20logoff #u20lines{display:none!important}
+body.pc23 #panel{display:none!important;position:fixed!important;left:auto;right:12px;top:180px;bottom:auto!important;width:428px!important;min-width:0!important;max-width:calc(100vw - 24px)!important;max-height:calc(100vh - 260px)!important;overflow:auto!important;background:#171c15!important;border:10px solid transparent!important;border-image:var(--pc-frame) 24 fill/10px stretch!important;box-shadow:0 7px 14px #0009!important;padding:0!important;transform:none!important;color:#dbd4b8!important;z-index:50}
+body.pc23.u20win #panel{display:block!important}
+body.pc23 #u20wh{position:sticky!important;top:0!important;height:27px!important;min-height:27px!important;background:#323a2b!important;padding:3px 22px 3px 6px!important;border-bottom:1px solid #686849!important;font-size:12px!important;z-index:5}
+body.pc23 #u20wx,body.pc23 #mClose{width:22px!important;height:22px!important;min-width:0!important;padding:0!important;background:transparent url(ui/pc-v23/close.webp) center/22px 22px no-repeat!important;font-size:0!important;border:0!important;position:absolute;right:3px;top:2px}
+body.pc23 #panel .tab{padding:6px!important;font-size:12px!important}
+body.pc23 :is(#panel,#modal) :is(.u2box,.card,.u2tt){background:#111810!important;border:1px solid #4c5341!important;border-radius:0!important;color:#d9d5b8!important}
+body.pc23 #modal{z-index:1000!important}
+body.pc23 #modal .mbox{background:#151c13!important;border:10px solid transparent!important;border-image:var(--pc-frame) 24 fill/10px stretch!important;border-radius:0!important;color:#ded6b2!important;max-height:calc(100vh - 40px)!important;font-size:12px!important}
+/* Inventory: exact 6 x 10 grid in the 223 x 349 Vietnamese Ui.pak bitmap. */
+body.pc23[data-u2t=inv] #panel{width:223px!important;border:0!important;background:transparent!important;overflow:visible!important;max-height:none!important;top:160px}
+body.pc23[data-u2t=inv] #u20wh{position:absolute!important;left:0;top:0;width:223px;height:28px!important;background:transparent!important;border:0!important}
+body.pc23[data-u2t=inv] #u20wt{display:none!important}
+body.pc23[data-u2t=inv] #t-inv{padding:0!important}
+body.pc23 .u2bagrow{display:flex!important;gap:4px!important;align-items:flex-start!important}
+body.pc23 .u2bag{position:relative!important;width:223px!important;min-width:223px!important;height:446px!important;padding:0!important;background:url(ui/pc-v23/inventory.webp) 0 0/223px 349px no-repeat!important;border:0!important}
+body.pc23 .u2bh{position:absolute!important;left:8px;top:351px;width:207px;height:24px!important;gap:2px!important;display:flex!important;font-size:10px!important;background:#20271c!important}
+body.pc23 .u2bh #iSort{max-width:80px!important;font-size:10px!important}
+body.pc23 .u2bag>.invgrid{position:absolute!important;left:28px!important;top:44px!important;display:grid!important;grid-template-columns:repeat(6,28px)!important;grid-auto-rows:28px!important;gap:0!important;padding:0!important;border:0!important;background:transparent!important;width:168px!important;height:280px!important;overflow:hidden!important}
+body.pc23 .u2bag>.invgrid .it{width:28px!important;height:28px!important;min-width:0!important;min-height:0!important;border:1px solid #4e5042!important;border-radius:0!important;margin:0!important;padding:1px!important;background:transparent!important}
+body.pc23 .u2bag>.invgrid .it img{max-width:26px!important;max-height:26px!important;width:100%!important;height:100%!important;object-fit:contain!important}
+body.pc23 .u2bag>.invgrid .it :is(i,u){font-size:8px!important}
+body.pc23 .u2money{position:absolute!important;top:376px;left:8px;width:207px!important;background:#151d13!important;font-size:10px!important;gap:1px 3px!important;padding:2px!important}
+body.pc23 .u2act{position:absolute!important;left:4px;top:411px;width:215px;gap:1px!important;display:flex!important;flex-wrap:wrap!important}
+body.pc23 .u2act#u2invB2{top:436px}
+body.pc23 .u2act button{font-size:9px!important;padding:2px 3px!important;min-height:20px!important;white-space:nowrap}
+body.pc23 .u2rx{position:absolute!important;right:227px!important;top:0!important;width:223px!important;max-height:446px;overflow:auto;background:#121b13!important;border:5px solid transparent!important;border-image:var(--pc-frame) 24 fill/5px stretch!important}
+/* Character: original 428 x 430 background, live stats and equipment over it. */
+body.pc23[data-u2t=char] #panel{width:428px!important;height:430px!important;max-height:calc(100vh - 120px)!important;top:90px;border:0!important;background:url(ui/pc-v23/character.webp) 0 0/428px 430px no-repeat!important}
+body.pc23[data-u2t=char] #u20wh{margin:18px 8px 0!important;width:412px!important;height:28px!important;background:#343b2b!important}
+body.pc23[data-u2t=char] #t-char{padding:0!important}
+body.pc23 .u2char{display:block!important;position:relative!important;height:347px!important}
+body.pc23 .u2dollw{position:absolute!important;left:215px;top:4px;width:204px!important;height:325px!important}
+body.pc23 .u2nm{font-size:11px!important;height:24px;background:#151b12!important;overflow:hidden}
+body.pc23 .u2doll{position:absolute!important;left:0;top:27px;width:252px!important;height:300px!important;transform:scale(.79)!important;transform-origin:top left!important;border:0!important;background:#121910!important}
+body.pc23 .u2dollw .u2btns{position:absolute!important;bottom:0!important;left:0!important;display:flex;gap:1px!important}
+body.pc23 .u2dollw .u2btns button{font-size:10px!important}
+body.pc23 .u2info{position:absolute!important;left:12px!important;top:4px!important;width:192px!important;height:321px!important;overflow:auto!important;background:#161b13!important;padding:0!important;font-size:11px!important}
+body.pc23 .u2info .u2box{padding:3px!important}
+body.pc23 .u2h{margin:2px 0!important;font-size:11px!important;padding:1px!important}
+body.pc23 .u2st{font-size:10px!important;gap:1px 3px!important}
+body.pc23 .u2a{height:23px!important;min-height:0!important;gap:3px!important;font-size:11px!important}
+body.pc23 .u2a button{padding:0 4px!important;font-size:10px!important}
+/* Martial skill window at its original 205 x 376 sprite size. */
+body.pc23[data-u2t=skill] #panel{width:205px!important;height:376px!important;top:160px;border:0!important;background:url(ui/pc-v23/skills.webp) 0 0/205px 376px no-repeat!important;overflow:visible!important;max-height:none!important}
+body.pc23[data-u2t=skill] #u20wh{display:none!important}
+body.pc23[data-u2t=skill] #t-skill{padding:0!important}
+body.pc23 .pc23-skillbook{position:relative;width:205px;height:376px}
+body.pc23 .pc23-skillbook h3{position:absolute;left:7px;top:6px;width:191px;height:27px;margin:0;background:#333e2e;text-align:center;line-height:27px;font-size:15px;color:#d9ebce}
+body.pc23 .pc23-sktabs{position:absolute;left:6px;top:39px;width:193px;display:flex;height:20px}
+body.pc23 .pc23-sktabs button{flex:1;font-size:10px!important;padding:0!important}
+body.pc23 .pc23-skgrid{position:absolute;left:16px;top:72px;display:grid;grid-template-columns:repeat(5,32px);grid-auto-rows:32px;gap:3px}
+body.pc23 .pc23-skill,body.pc23 .pc23-skempty{position:relative;width:32px;height:32px;background:#0d160e;border:1px solid #505b44}
+body.pc23 .pc23-skill>button:first-child{padding:0!important;width:30px;height:30px;border:0!important;background:transparent!important}
+body.pc23 .pc23-skill img{width:30px;height:30px;object-fit:contain}
+body.pc23 .pc23-skill:not(.learned) img{filter:grayscale(.8);opacity:.5}
+body.pc23 .pc23-skill.primary{outline:1px solid #efd47f}
+body.pc23 .pc23-skill>span{position:absolute;bottom:-1px;left:1px;font-size:9px;color:#f8df8a;pointer-events:none;text-shadow:1px 1px #000}
+body.pc23 .pc23-plus{position:absolute!important;right:-2px;top:-3px;width:13px;height:13px;padding:0!important;background:#2e4b25!important;color:#f3dc8f!important;border:1px solid #b49a55!important;font-size:11px!important;line-height:10px}
+body.pc23 .pc23-skpoints{position:absolute;top:290px;left:12px;font-size:11px}
+body.pc23 .pc23-pages{position:absolute;top:282px;right:9px;display:flex;gap:2px;align-items:center;font-size:10px}
+body.pc23 .pc23-pages button{padding:0 3px!important}
+body.pc23 .pc23-sktools{position:absolute;left:8px;top:311px;display:flex;gap:2px}
+body.pc23 .pc23-sktools button{font-size:10px!important}
+body.pc23 .pc23-skclose{position:absolute;left:7px;bottom:6px;width:191px;height:29px;font-size:14px!important}
+body.pc23 #townBar{position:fixed!important;left:12px;top:154px!important;right:auto!important;max-width:calc(100vw - 170px)!important;z-index:38!important}
+body.pc23 #inBtn{position:fixed!important;bottom:112px!important;right:12px!important;z-index:36!important}
+body.pc23 #u20boss{top:10px!important;left:50%!important;transform:translateX(-50%)!important;width:220px!important}
+body.pc23 #u20trk{position:fixed!important;right:12px!important;top:180px!important;width:190px!important}
+body.pc23 #csel .cs-panel{border-radius:0!important;border:8px solid transparent!important;border-image:var(--pc-frame) 24 fill/8px stretch!important;background:#182116!important}
+@media(max-height:680px){body.pc23[data-u2t=inv] #panel,body.pc23[data-u2t=skill] #panel{top:80px!important}body.pc23 #u20log{width:240px!important}body.pc23 #u20lines{height:65px!important;max-height:65px!important}}
+@media(max-width:1000px){body.pc23 #pc23-menu button{min-width:40px!important;font-size:10px!important}body.pc23 #pc23-activities{max-width:230px}body.pc23 #pc23-menu{gap:0}}
+/* Final layout constraints override inherited desktop H5 geometry. */
+body.pc23 #pc23-controls button{display:inline-flex!important;position:static!important;min-height:22px!important;padding:2px 5px!important;font-size:10px!important}
+body.pc23 #pc23-tkmini{position:absolute;left:0;top:0;width:128px;height:128px}
+body.pc23 #pc23-tkmini[hidden]{display:none!important}
+body.pc23 #u20log{height:auto!important;min-height:0!important;max-height:160px!important;display:block!important;padding:0!important}
+body.pc23 #u20log #u20lines{position:static!important;height:100px!important;min-height:0!important;max-height:100px!important;overflow:auto!important;margin:0!important;padding:3px!important}
+body.pc23 #panel:not([data-pc23-dragged]){left:auto!important;right:160px!important}
+body.pc23[data-u2t=char] #panel{top:180px!important}
+body.pc23 .u2act{height:22px!important;padding:0!important;min-height:0!important;background:#192116!important}
+body.pc23 .u2act button{width:auto!important;min-width:0!important;max-width:none!important;flex:1 1 0!important;height:22px!important;min-height:0!important;line-height:12px!important;padding:2px!important;font-size:9px!important;overflow:hidden!important}
+body.pc23 .u2bag{height:462px!important}
+body.pc23 .pc23-skillbook h3{top:4px!important;left:5px!important;width:195px!important;height:31px!important;min-height:0!important;line-height:31px!important;padding:0!important;border:0!important;box-sizing:border-box!important;background:#333e2e!important}
+body.pc23 .u2dollw .u2btns{bottom:2px!important}
+body.pc23 .u2info .u2h{display:flex!important;align-items:center!important;white-space:nowrap!important;gap:2px!important}
+body.pc23 .u2info .u2h button{width:auto!important;font-size:9px!important;white-space:nowrap!important;flex:0 0 auto!important;padding:2px!important}
+body.pc23 #tkHud{position:fixed!important;left:50%!important;top:8px!important;width:430px!important;transform:translateX(-50%)!important;z-index:40!important;background:#152015e8!important;border:5px solid transparent!important;border-image:var(--pc-frame) 24 fill/5px stretch!important;border-radius:0!important;font-size:11px!important}
+body.pc23 #tkHud .tk-topbar{font-size:13px!important;padding:3px!important}
+body.pc23 #tkHud .tk-stats{font-size:10px!important;padding:3px!important}
+body.pc23 #tkHud .tk-actions button{font-size:10px!important}
+@media(max-height:680px){body.pc23[data-u2t=char] #panel{top:90px!important}body.pc23 #u20log #u20lines{height:65px!important;max-height:65px!important}}
+@media(max-width:900px){body.pc23 #panel:not([data-pc23-dragged]){right:10px!important}body.pc23[data-u2t=char] #panel{top:160px!important}body.pc23 #pc23-menu{bottom:69px!important}body.pc23 #pc23-activities{max-width:270px!important}}
+body.pc23 #hud .bar.hp::before,body.pc23 #hud .bar.mp::before{content:"";position:absolute;left:27px;top:20px;width:76px;height:5px;background:#081010}
+body.pc23 #hud .bar.hp i,body.pc23 #hud .bar.mp i{max-width:none!important;z-index:1}
+body.pc23 .pc23-charfoot{position:absolute;left:8px;top:369px;width:412px;height:28px;display:flex;gap:1px;z-index:3}
+body.pc23 .pc23-charfoot button{flex:1;font-size:13px!important}
+body.pc23 .u2dollw .u2btns{bottom:30px!important;max-width:200px!important}
+body.pc23 .u2dollw .u2btns button{white-space:nowrap!important;font-size:10px!important;min-width:0!important;padding:2px 3px!important}
+body.pc23 .u2info{height:310px!important}
+body.pc23 .u2st{grid-template-columns:1fr auto!important}
+body.pc23 .u2kv{grid-template-columns:1fr auto!important;font-size:10px!important;gap:2px!important}
+body.pc23 .u2info .u2h .sp{display:none!important}
+body.pc23 .u2info .u2h{font-size:10px!important}
+body.pc23 .u2info .u2h button{font-size:9px!important;padding:1px!important}
+body.pc23.tk #pc23-maplabel #u20zn{display:none!important}
+body.pc23.tk #pc23-maplabel #u20zb::before{content:"Chiến trường Tống Kim";font-size:10px}
+body.pc23.tk #pc23-maplabel #u20zb{opacity:1!important}

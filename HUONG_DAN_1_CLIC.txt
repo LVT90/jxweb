@@ -1,0 +1,25 @@
+VO LAM IDLE - TU DONG THU THAP TAI NGUYEN - PHIEN BAN KHONG CAN CHON TUNG TEP
+
+1. Giai nen TOAN BO tap tin ZIP ra mot thu muc tren may co Internet.
+2. Nhap dup TU_DONG_THU_THAP_TAI_NGUYEN.cmd.
+3. De cua so hoat dong. Chuong trinh tu:
+   - Kiem tra website.
+   - Lay ca danh sach core va atlas/cong cu choi tu file manifest co san.
+   - Bo qua tep da co va nhung tep xac nhan 404 o lan chay truoc.
+   - Tai 4 luong, gioi han 4 yeu cau/giay, tu thu lai khi gap loi mang.
+   - Dong goi file anh/am thanh moi thanh VoLamIdle_TAI_BO_SUNG_PHAN_01.zip ...
+   - Viet BAO_CAO_TU_DONG.txt va DANH_SACH_CHUA_LAY_DUOC.txt.
+4. Neu dung giua chung: chay lai cung tep CMD. Phan da tai duoc duoc giu nguyen.
+5. Choi game offline bang CHAY_GAME_OFFLINE.cmd ngay trong thu muc.
+6. Neu muon ChatGPT kiem tra va xuat lai ban offline da gom anh, gui vao chat:
+   - BAO_CAO_TU_DONG.txt
+   - Cac tep VoLamIdle_TAI_BO_SUNG_PHAN_XX.zip.
+
+QUAN TRONG
+- Website co the khong con phuc vu tat ca duong dan trong manifest (404), dieu do khong co nghia la cong cu loi.
+- 9499 duong dan atlas la DS tham chieu trong ma, chua duoc xac minh tat ca dang ton tai.
+- Neu tai hang nghin anh, qua trinh co the mat hang chuc phut hoac nhieu gio. Dung luong co the lon.
+- Khong tai du lieu tai khoan, cookie, mat khau, API rieng tu hoac du lieu may chu.
+- Can quyen su dung ma va tai nguyen. Ban da cho biet duoc tac gia cap quyen.
+- Khong co ma backend, nhung tinh nang online phu thuoc may chu se khong tu nhien hoat dong offline.
+- Neu anh qua nhieu, HTML 1 file co the qua nang. Nen dung folder va file CHAY_GAME_OFFLINE.cmd.
